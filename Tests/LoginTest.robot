@@ -1,10 +1,9 @@
 *** Settings ***
 Documentation  This is some basic info about the whole suite
 
-Resource  ../Resources/Common.robot         # necessary for Setup & Teardown
-Resource  ../Resources/PO/Login.robot       # necessary for lower level keywords in test cases
-Test Template   Login Should Fail When      #because this is data driven test
-
+Resource  ../Resources/Common.robot                 # necessary for Setup & Teardown
+Resource  ../Resources/PO/Login.robot               # necessary for lower level keywords in test cases
+Test Template   Login Should Fail When               #because this is data driven test
 Test Setup  Common.Begin Web Test
 Test Teardown  Common.End Web Test
 
@@ -20,7 +19,7 @@ The Password is empty       tomsmith        ${empty}
 Both fields are empty       ${empty}        ${empty}
 
 *** Keywords ***
-Login Should Fail When  [Arguments]  ${username}  ${password}
+Login Should Fail When [Arguments]  ${username}  ${password}
     Login.Load
     Login.With  ${username}  ${password}
     Login.Verify Login Fails
