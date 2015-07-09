@@ -22,7 +22,7 @@ Verify Login Is Successful
     Page Should Contain  You logged into a secure area!
 
 Verify Login Fails
-    Page Should Contain  Your username is invalid!
+    Page Should Contain Element  xpath=//*[@class="flash error"]
 
 With  [Arguments]  ${username}    ${password}
     Load

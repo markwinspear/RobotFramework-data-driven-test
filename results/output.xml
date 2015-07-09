@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generated="20150709 11:52:20.161" generator="Robot 2.9b2 (Python 2.7.10 on win32)">
+<robot generated="20150709 13:19:28.468" generator="Robot 2.9b2 (Python 2.7.10 on win32)">
 <suite source="E:\Google Drive\Documents\Dev &amp; Test\Robot Framework with Selenium\development\robot-scripts\data-driven-test\tests\logintest.robot" id="s1" name="Logintest">
-<test id="s1-t1" name="Login Fails With Invalid Details">
+<test id="s1-t1" name="The Password is wrong">
 <kw type="setup" name="Begin Web Test" library="Common">
 <kw name="Open Browser" library="Selenium2Library">
 <doc>Opens a new browser instance to given URL.</doc>
@@ -11,33 +11,38 @@
 <arg>remote_url=${REMOTE_URL}</arg>
 <arg>desired_capabilities=${DESIRED_CAPABILITIES}</arg>
 </arguments>
-<msg timestamp="20150709 11:52:20.583" level="INFO">Opening browser 'ie' to base url 'about:blank' through remote server at 'http://markwinspear:3e478c65-7a2a-4119-b4a1-cb96b23e6ed5@ondemand.saucelabs.com:80/wd/hub'</msg>
-<status status="PASS" endtime="20150709 11:52:25.772" starttime="20150709 11:52:20.583"></status>
+<msg timestamp="20150709 13:19:28.807" level="INFO">Opening browser 'ie' to base url 'about:blank' through remote server at 'http://markwinspear:3e478c65-7a2a-4119-b4a1-cb96b23e6ed5@ondemand.saucelabs.com:80/wd/hub'</msg>
+<status status="PASS" endtime="20150709 13:19:34.728" starttime="20150709 13:19:28.807"></status>
 </kw>
-<status status="PASS" endtime="20150709 11:52:25.772" starttime="20150709 11:52:20.583"></status>
+<status status="PASS" endtime="20150709 13:19:34.728" starttime="20150709 13:19:28.807"></status>
 </kw>
+<kw name="Login Should Fail When">
+<arguments>
+<arg>tomsmith</arg>
+<arg>Super</arg>
+</arguments>
 <kw name="Load" library="Login">
 <kw name="Go To" library="Selenium2Library">
 <doc>Navigates the active browser instance to the provided URL.</doc>
 <arguments>
 <arg>http://the-internet.herokuapp.com/login</arg>
 </arguments>
-<msg timestamp="20150709 11:52:25.772" level="INFO">Opening url 'http://the-internet.herokuapp.com/login'</msg>
-<status status="PASS" endtime="20150709 11:52:29.066" starttime="20150709 11:52:25.772"></status>
+<msg timestamp="20150709 13:19:34.745" level="INFO">Opening url 'http://the-internet.herokuapp.com/login'</msg>
+<status status="PASS" endtime="20150709 13:19:37.508" starttime="20150709 13:19:34.745"></status>
 </kw>
 <kw name="Wait Until Page Contains" library="Selenium2Library">
 <doc>Waits until `text` appears on current page.</doc>
 <arguments>
 <arg>Login Page</arg>
 </arguments>
-<status status="PASS" endtime="20150709 11:52:29.400" starttime="20150709 11:52:29.066"></status>
+<status status="PASS" endtime="20150709 13:19:37.854" starttime="20150709 13:19:37.508"></status>
 </kw>
-<status status="PASS" endtime="20150709 11:52:29.400" starttime="20150709 11:52:25.772"></status>
+<status status="PASS" endtime="20150709 13:19:37.854" starttime="20150709 13:19:34.745"></status>
 </kw>
 <kw name="With" library="Login">
 <arguments>
-<arg>fred</arg>
-<arg>dave</arg>
+<arg>${username}</arg>
+<arg>${password}</arg>
 </arguments>
 <kw name="Load" library="Login">
 <kw name="Go To" library="Selenium2Library">
@@ -45,17 +50,17 @@
 <arguments>
 <arg>http://the-internet.herokuapp.com/login</arg>
 </arguments>
-<msg timestamp="20150709 11:52:29.400" level="INFO">Opening url 'http://the-internet.herokuapp.com/login'</msg>
-<status status="PASS" endtime="20150709 11:52:30.197" starttime="20150709 11:52:29.400"></status>
+<msg timestamp="20150709 13:19:37.871" level="INFO">Opening url 'http://the-internet.herokuapp.com/login'</msg>
+<status status="PASS" endtime="20150709 13:19:38.908" starttime="20150709 13:19:37.871"></status>
 </kw>
 <kw name="Wait Until Page Contains" library="Selenium2Library">
 <doc>Waits until `text` appears on current page.</doc>
 <arguments>
 <arg>Login Page</arg>
 </arguments>
-<status status="PASS" endtime="20150709 11:52:30.532" starttime="20150709 11:52:30.197"></status>
+<status status="PASS" endtime="20150709 13:19:39.314" starttime="20150709 13:19:38.908"></status>
 </kw>
-<status status="PASS" endtime="20150709 11:52:30.532" starttime="20150709 11:52:29.400"></status>
+<status status="PASS" endtime="20150709 13:19:39.314" starttime="20150709 13:19:37.871"></status>
 </kw>
 <kw name="Enter Username" library="Login">
 <arguments>
@@ -67,10 +72,10 @@
 <arg>id=username</arg>
 <arg>${username}</arg>
 </arguments>
-<msg timestamp="20150709 11:52:30.545" level="INFO">Typing text 'fred' into text field 'id=username'</msg>
-<status status="PASS" endtime="20150709 11:52:31.839" starttime="20150709 11:52:30.532"></status>
+<msg timestamp="20150709 13:19:39.318" level="INFO">Typing text 'tomsmith' into text field 'id=username'</msg>
+<status status="PASS" endtime="20150709 13:19:40.771" starttime="20150709 13:19:39.318"></status>
 </kw>
-<status status="PASS" endtime="20150709 11:52:31.839" starttime="20150709 11:52:30.532"></status>
+<status status="PASS" endtime="20150709 13:19:40.771" starttime="20150709 13:19:39.314"></status>
 </kw>
 <kw name="Enter Password" library="Login">
 <arguments>
@@ -82,10 +87,10 @@
 <arg>id=password</arg>
 <arg>${password}</arg>
 </arguments>
-<msg timestamp="20150709 11:52:31.839" level="INFO">Typing text 'dave' into text field 'id=password'</msg>
-<status status="PASS" endtime="20150709 11:52:33.081" starttime="20150709 11:52:31.839"></status>
+<msg timestamp="20150709 13:19:40.771" level="INFO">Typing text 'Super' into text field 'id=password'</msg>
+<status status="PASS" endtime="20150709 13:19:42.190" starttime="20150709 13:19:40.771"></status>
 </kw>
-<status status="PASS" endtime="20150709 11:52:33.081" starttime="20150709 11:52:31.839"></status>
+<status status="PASS" endtime="20150709 13:19:42.190" starttime="20150709 13:19:40.771"></status>
 </kw>
 <kw name="Click Login Button" library="Login">
 <kw name="Click Button" library="Selenium2Library">
@@ -93,23 +98,25 @@
 <arguments>
 <arg>xpath=//*[@id="login"]/button</arg>
 </arguments>
-<msg timestamp="20150709 11:52:33.081" level="INFO">Clicking button 'xpath=//*[@id="login"]/button'.</msg>
-<status status="PASS" endtime="20150709 11:52:35.329" starttime="20150709 11:52:33.081"></status>
+<msg timestamp="20150709 13:19:42.206" level="INFO">Clicking button 'xpath=//*[@id="login"]/button'.</msg>
+<status status="PASS" endtime="20150709 13:19:44.806" starttime="20150709 13:19:42.206"></status>
 </kw>
-<status status="PASS" endtime="20150709 11:52:35.329" starttime="20150709 11:52:33.081"></status>
+<status status="PASS" endtime="20150709 13:19:44.806" starttime="20150709 13:19:42.206"></status>
 </kw>
-<status status="PASS" endtime="20150709 11:52:35.345" starttime="20150709 11:52:29.400"></status>
+<status status="PASS" endtime="20150709 13:19:44.806" starttime="20150709 13:19:37.854"></status>
 </kw>
 <kw name="Verify Login Fails" library="Login">
-<kw name="Page Should Contain" library="Selenium2Library">
-<doc>Verifies that current page contains `text`.</doc>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies element identified by `locator` is found on the current page.</doc>
 <arguments>
-<arg>Your username is invalid!</arg>
+<arg>xpath=//*[@class="flash error"]</arg>
 </arguments>
-<msg timestamp="20150709 11:52:35.993" level="INFO">Current page contains text 'Your username is invalid!'.</msg>
-<status status="PASS" endtime="20150709 11:52:35.993" starttime="20150709 11:52:35.345"></status>
+<msg timestamp="20150709 13:19:45.162" level="INFO">Current page contains element 'xpath=//*[@class="flash error"]'.</msg>
+<status status="PASS" endtime="20150709 13:19:45.162" starttime="20150709 13:19:44.806"></status>
 </kw>
-<status status="PASS" endtime="20150709 11:52:35.993" starttime="20150709 11:52:35.345"></status>
+<status status="PASS" endtime="20150709 13:19:45.162" starttime="20150709 13:19:44.806"></status>
+</kw>
+<status status="PASS" endtime="20150709 13:19:45.162" starttime="20150709 13:19:34.744"></status>
 </kw>
 <kw type="teardown" name="End Web Test" library="Common">
 <kw name="Run Keyword If" library="BuiltIn">
@@ -129,32 +136,330 @@
 <arg>${TEST_TAGS}</arg>
 <arg>${REMOTE_URL}</arg>
 </arguments>
-<msg timestamp="20150709 11:52:36.016" level="INFO">Starting new HTTPS connection (1): saucelabs.com</msg>
-<msg timestamp="20150709 11:52:37.747" html="yes" level="INFO">&lt;a href="https://saucelabs.com/jobs/5f28242e6b1844ad82cbe92feff5b4f6/video.flv"&gt;video.flv&lt;/a&gt;</msg>
-<status status="PASS" endtime="20150709 11:52:37.747" starttime="20150709 11:52:36.007"></status>
+<msg timestamp="20150709 13:19:45.181" level="INFO">Starting new HTTPS connection (1): saucelabs.com</msg>
+<msg timestamp="20150709 13:19:46.246" html="yes" level="INFO">&lt;a href="https://saucelabs.com/jobs/7612cf1808114e34b61c6e0932fa97f5/video.flv"&gt;video.flv&lt;/a&gt;</msg>
+<status status="PASS" endtime="20150709 13:19:46.246" starttime="20150709 13:19:45.173"></status>
 </kw>
-<status status="PASS" endtime="20150709 11:52:37.763" starttime="20150709 11:52:35.993"></status>
+<status status="PASS" endtime="20150709 13:19:46.246" starttime="20150709 13:19:45.169"></status>
 </kw>
 <kw name="Close Browser" library="Selenium2Library">
 <doc>Closes the current browser.</doc>
-<status status="PASS" endtime="20150709 11:52:38.161" starttime="20150709 11:52:37.763"></status>
+<status status="PASS" endtime="20150709 13:19:46.669" starttime="20150709 13:19:46.246"></status>
 </kw>
-<status status="PASS" endtime="20150709 11:52:38.161" starttime="20150709 11:52:35.993"></status>
+<status status="PASS" endtime="20150709 13:19:46.669" starttime="20150709 13:19:45.169"></status>
 </kw>
-<status status="PASS" endtime="20150709 11:52:38.161" critical="yes" starttime="20150709 11:52:20.583"></status>
+<status status="PASS" endtime="20150709 13:19:46.669" critical="yes" starttime="20150709 13:19:28.803"></status>
+</test>
+<test id="s1-t2" name="The Password is empty">
+<kw type="setup" name="Begin Web Test" library="Common">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+<arg>remote_url=${REMOTE_URL}</arg>
+<arg>desired_capabilities=${DESIRED_CAPABILITIES}</arg>
+</arguments>
+<msg timestamp="20150709 13:19:46.669" level="INFO">Opening browser 'ie' to base url 'about:blank' through remote server at 'http://markwinspear:3e478c65-7a2a-4119-b4a1-cb96b23e6ed5@ondemand.saucelabs.com:80/wd/hub'</msg>
+<status status="PASS" endtime="20150709 13:19:51.975" starttime="20150709 13:19:46.669"></status>
+</kw>
+<status status="PASS" endtime="20150709 13:19:51.975" starttime="20150709 13:19:46.669"></status>
+</kw>
+<kw name="Login Should Fail When">
+<arguments>
+<arg>tomsmith</arg>
+<arg>${empty}</arg>
+</arguments>
+<kw name="Load" library="Login">
+<kw name="Go To" library="Selenium2Library">
+<doc>Navigates the active browser instance to the provided URL.</doc>
+<arguments>
+<arg>http://the-internet.herokuapp.com/login</arg>
+</arguments>
+<msg timestamp="20150709 13:19:51.975" level="INFO">Opening url 'http://the-internet.herokuapp.com/login'</msg>
+<status status="PASS" endtime="20150709 13:19:54.700" starttime="20150709 13:19:51.975"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>Login Page</arg>
+</arguments>
+<status status="PASS" endtime="20150709 13:19:55.028" starttime="20150709 13:19:54.700"></status>
+</kw>
+<status status="PASS" endtime="20150709 13:19:55.028" starttime="20150709 13:19:51.975"></status>
+</kw>
+<kw name="With" library="Login">
+<arguments>
+<arg>${username}</arg>
+<arg>${password}</arg>
+</arguments>
+<kw name="Load" library="Login">
+<kw name="Go To" library="Selenium2Library">
+<doc>Navigates the active browser instance to the provided URL.</doc>
+<arguments>
+<arg>http://the-internet.herokuapp.com/login</arg>
+</arguments>
+<msg timestamp="20150709 13:19:55.043" level="INFO">Opening url 'http://the-internet.herokuapp.com/login'</msg>
+<status status="PASS" endtime="20150709 13:19:55.920" starttime="20150709 13:19:55.028"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>Login Page</arg>
+</arguments>
+<status status="PASS" endtime="20150709 13:19:56.263" starttime="20150709 13:19:55.920"></status>
+</kw>
+<status status="PASS" endtime="20150709 13:19:56.263" starttime="20150709 13:19:55.028"></status>
+</kw>
+<kw name="Enter Username" library="Login">
+<arguments>
+<arg>${username}</arg>
+</arguments>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>id=username</arg>
+<arg>${username}</arg>
+</arguments>
+<msg timestamp="20150709 13:19:56.263" level="INFO">Typing text 'tomsmith' into text field 'id=username'</msg>
+<status status="PASS" endtime="20150709 13:19:57.740" starttime="20150709 13:19:56.263"></status>
+</kw>
+<status status="PASS" endtime="20150709 13:19:57.740" starttime="20150709 13:19:56.263"></status>
+</kw>
+<kw name="Enter Password" library="Login">
+<arguments>
+<arg>${password}</arg>
+</arguments>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>id=password</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20150709 13:19:57.740" level="INFO">Typing text '' into text field 'id=password'</msg>
+<status status="PASS" endtime="20150709 13:19:59.010" starttime="20150709 13:19:57.740"></status>
+</kw>
+<status status="PASS" endtime="20150709 13:19:59.010" starttime="20150709 13:19:57.740"></status>
+</kw>
+<kw name="Click Login Button" library="Login">
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//*[@id="login"]/button</arg>
+</arguments>
+<msg timestamp="20150709 13:19:59.010" level="INFO">Clicking button 'xpath=//*[@id="login"]/button'.</msg>
+<status status="PASS" endtime="20150709 13:20:01.241" starttime="20150709 13:19:59.010"></status>
+</kw>
+<status status="PASS" endtime="20150709 13:20:01.245" starttime="20150709 13:19:59.010"></status>
+</kw>
+<status status="PASS" endtime="20150709 13:20:01.245" starttime="20150709 13:19:55.028"></status>
+</kw>
+<kw name="Verify Login Fails" library="Login">
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies element identified by `locator` is found on the current page.</doc>
+<arguments>
+<arg>xpath=//*[@class="flash error"]</arg>
+</arguments>
+<msg timestamp="20150709 13:20:01.581" level="INFO">Current page contains element 'xpath=//*[@class="flash error"]'.</msg>
+<status status="PASS" endtime="20150709 13:20:01.581" starttime="20150709 13:20:01.245"></status>
+</kw>
+<status status="PASS" endtime="20150709 13:20:01.581" starttime="20150709 13:20:01.245"></status>
+</kw>
+<status status="PASS" endtime="20150709 13:20:01.581" starttime="20150709 13:19:51.975"></status>
+</kw>
+<kw type="teardown" name="End Web Test" library="Common">
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${REMOTE_URL}' != ''</arg>
+<arg>Update Saucelabs Test Result</arg>
+<arg>${SUITE_NAME}: ${TEST_NAME}</arg>
+<arg>${TEST_STATUS}</arg>
+<arg>${TEST_TAGS}</arg>
+<arg>${REMOTE_URL}</arg>
+</arguments>
+<kw name="Update Saucelabs Test Result" library="Saucelabs">
+<arguments>
+<arg>${SUITE_NAME}: ${TEST_NAME}</arg>
+<arg>${TEST_STATUS}</arg>
+<arg>${TEST_TAGS}</arg>
+<arg>${REMOTE_URL}</arg>
+</arguments>
+<msg timestamp="20150709 13:20:01.603" level="INFO">Starting new HTTPS connection (1): saucelabs.com</msg>
+<msg timestamp="20150709 13:20:02.278" html="yes" level="INFO">&lt;a href="https://saucelabs.com/jobs/5c1af6cdd4f0479da2f89128714aefe3/video.flv"&gt;video.flv&lt;/a&gt;</msg>
+<status status="PASS" endtime="20150709 13:20:02.278" starttime="20150709 13:20:01.597"></status>
+</kw>
+<status status="PASS" endtime="20150709 13:20:02.278" starttime="20150709 13:20:01.581"></status>
+</kw>
+<kw name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20150709 13:20:02.681" starttime="20150709 13:20:02.278"></status>
+</kw>
+<status status="PASS" endtime="20150709 13:20:02.681" starttime="20150709 13:20:01.581"></status>
+</kw>
+<status status="PASS" endtime="20150709 13:20:02.681" critical="yes" starttime="20150709 13:19:46.669"></status>
+</test>
+<test id="s1-t3" name="Both fields are empty">
+<kw type="setup" name="Begin Web Test" library="Common">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+<arg>remote_url=${REMOTE_URL}</arg>
+<arg>desired_capabilities=${DESIRED_CAPABILITIES}</arg>
+</arguments>
+<msg timestamp="20150709 13:20:02.684" level="INFO">Opening browser 'ie' to base url 'about:blank' through remote server at 'http://markwinspear:3e478c65-7a2a-4119-b4a1-cb96b23e6ed5@ondemand.saucelabs.com:80/wd/hub'</msg>
+<status status="PASS" endtime="20150709 13:20:07.923" starttime="20150709 13:20:02.684"></status>
+</kw>
+<status status="PASS" endtime="20150709 13:20:07.923" starttime="20150709 13:20:02.684"></status>
+</kw>
+<kw name="Login Should Fail When">
+<arguments>
+<arg>${empty}</arg>
+<arg>${empty}</arg>
+</arguments>
+<kw name="Load" library="Login">
+<kw name="Go To" library="Selenium2Library">
+<doc>Navigates the active browser instance to the provided URL.</doc>
+<arguments>
+<arg>http://the-internet.herokuapp.com/login</arg>
+</arguments>
+<msg timestamp="20150709 13:20:07.923" level="INFO">Opening url 'http://the-internet.herokuapp.com/login'</msg>
+<status status="PASS" endtime="20150709 13:20:15.738" starttime="20150709 13:20:07.923"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>Login Page</arg>
+</arguments>
+<status status="PASS" endtime="20150709 13:20:16.101" starttime="20150709 13:20:15.738"></status>
+</kw>
+<status status="PASS" endtime="20150709 13:20:16.101" starttime="20150709 13:20:07.923"></status>
+</kw>
+<kw name="With" library="Login">
+<arguments>
+<arg>${username}</arg>
+<arg>${password}</arg>
+</arguments>
+<kw name="Load" library="Login">
+<kw name="Go To" library="Selenium2Library">
+<doc>Navigates the active browser instance to the provided URL.</doc>
+<arguments>
+<arg>http://the-internet.herokuapp.com/login</arg>
+</arguments>
+<msg timestamp="20150709 13:20:16.101" level="INFO">Opening url 'http://the-internet.herokuapp.com/login'</msg>
+<status status="PASS" endtime="20150709 13:20:16.985" starttime="20150709 13:20:16.101"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>Login Page</arg>
+</arguments>
+<status status="PASS" endtime="20150709 13:20:17.320" starttime="20150709 13:20:16.985"></status>
+</kw>
+<status status="PASS" endtime="20150709 13:20:17.320" starttime="20150709 13:20:16.101"></status>
+</kw>
+<kw name="Enter Username" library="Login">
+<arguments>
+<arg>${username}</arg>
+</arguments>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>id=username</arg>
+<arg>${username}</arg>
+</arguments>
+<msg timestamp="20150709 13:20:17.336" level="INFO">Typing text '' into text field 'id=username'</msg>
+<status status="PASS" endtime="20150709 13:20:18.674" starttime="20150709 13:20:17.336"></status>
+</kw>
+<status status="PASS" endtime="20150709 13:20:18.674" starttime="20150709 13:20:17.320"></status>
+</kw>
+<kw name="Enter Password" library="Login">
+<arguments>
+<arg>${password}</arg>
+</arguments>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>id=password</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20150709 13:20:18.678" level="INFO">Typing text '' into text field 'id=password'</msg>
+<status status="PASS" endtime="20150709 13:20:19.919" starttime="20150709 13:20:18.674"></status>
+</kw>
+<status status="PASS" endtime="20150709 13:20:19.934" starttime="20150709 13:20:18.674"></status>
+</kw>
+<kw name="Click Login Button" library="Login">
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//*[@id="login"]/button</arg>
+</arguments>
+<msg timestamp="20150709 13:20:19.934" level="INFO">Clicking button 'xpath=//*[@id="login"]/button'.</msg>
+<status status="PASS" endtime="20150709 13:20:22.360" starttime="20150709 13:20:19.934"></status>
+</kw>
+<status status="PASS" endtime="20150709 13:20:22.360" starttime="20150709 13:20:19.934"></status>
+</kw>
+<status status="PASS" endtime="20150709 13:20:22.360" starttime="20150709 13:20:16.101"></status>
+</kw>
+<kw name="Verify Login Fails" library="Login">
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies element identified by `locator` is found on the current page.</doc>
+<arguments>
+<arg>xpath=//*[@class="flash error"]</arg>
+</arguments>
+<msg timestamp="20150709 13:20:22.962" level="INFO">Current page contains element 'xpath=//*[@class="flash error"]'.</msg>
+<status status="PASS" endtime="20150709 13:20:22.962" starttime="20150709 13:20:22.360"></status>
+</kw>
+<status status="PASS" endtime="20150709 13:20:22.962" starttime="20150709 13:20:22.360"></status>
+</kw>
+<status status="PASS" endtime="20150709 13:20:22.962" starttime="20150709 13:20:07.923"></status>
+</kw>
+<kw type="teardown" name="End Web Test" library="Common">
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${REMOTE_URL}' != ''</arg>
+<arg>Update Saucelabs Test Result</arg>
+<arg>${SUITE_NAME}: ${TEST_NAME}</arg>
+<arg>${TEST_STATUS}</arg>
+<arg>${TEST_TAGS}</arg>
+<arg>${REMOTE_URL}</arg>
+</arguments>
+<kw name="Update Saucelabs Test Result" library="Saucelabs">
+<arguments>
+<arg>${SUITE_NAME}: ${TEST_NAME}</arg>
+<arg>${TEST_STATUS}</arg>
+<arg>${TEST_TAGS}</arg>
+<arg>${REMOTE_URL}</arg>
+</arguments>
+<msg timestamp="20150709 13:20:22.969" level="INFO">Starting new HTTPS connection (1): saucelabs.com</msg>
+<msg timestamp="20150709 13:20:23.771" html="yes" level="INFO">&lt;a href="https://saucelabs.com/jobs/8ff43ad4dc5744e7ac07c8cb19f46606/video.flv"&gt;video.flv&lt;/a&gt;</msg>
+<status status="PASS" endtime="20150709 13:20:23.771" starttime="20150709 13:20:22.969"></status>
+</kw>
+<status status="PASS" endtime="20150709 13:20:23.771" starttime="20150709 13:20:22.969"></status>
+</kw>
+<kw name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20150709 13:20:24.230" starttime="20150709 13:20:23.771"></status>
+</kw>
+<status status="PASS" endtime="20150709 13:20:24.230" starttime="20150709 13:20:22.968"></status>
+</kw>
+<status status="PASS" endtime="20150709 13:20:24.230" critical="yes" starttime="20150709 13:20:02.684"></status>
 </test>
 <doc>This is some basic info about the whole suite</doc>
-<status status="PASS" endtime="20150709 11:52:38.161" starttime="20150709 11:52:20.169"></status>
+<status status="PASS" endtime="20150709 13:20:24.230" starttime="20150709 13:19:28.488"></status>
 </suite>
 <statistics>
 <total>
-<stat fail="0" pass="1">Critical Tests</stat>
-<stat fail="0" pass="1">All Tests</stat>
+<stat fail="0" pass="3">Critical Tests</stat>
+<stat fail="0" pass="3">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat fail="0" id="s1" name="Logintest" pass="1">Logintest</stat>
+<stat fail="0" id="s1" name="Logintest" pass="3">Logintest</stat>
 </suite>
 </statistics>
 <errors>
