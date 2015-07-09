@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generated="20150709 13:43:00.770" generator="Robot 2.9b2 (Python 2.7.10 on win32)">
+<robot generated="20150709 14:16:27.338" generator="Robot 2.9b2 (Python 2.7.10 on win32)">
 <suite source="E:\Google Drive\Documents\Dev &amp; Test\Robot Framework with Selenium\development\robot-scripts\data-driven-test\tests\logintest.robot" id="s1" name="Logintest">
 <test id="s1-t1" name="The Password is wrong">
 <kw type="setup" name="Begin Web Test" library="Common">
@@ -11,10 +11,10 @@
 <arg>remote_url=${REMOTE_URL}</arg>
 <arg>desired_capabilities=${DESIRED_CAPABILITIES}</arg>
 </arguments>
-<msg timestamp="20150709 13:43:01.129" level="INFO">Opening browser 'ie' to base url 'about:blank' through remote server at 'http://markwinspear:3e478c65-7a2a-4119-b4a1-cb96b23e6ed5@ondemand.saucelabs.com:80/wd/hub'</msg>
-<status status="PASS" endtime="20150709 13:43:06.756" starttime="20150709 13:43:01.120"></status>
+<msg timestamp="20150709 14:16:27.652" level="INFO">Opening browser 'ie' to base url 'about:blank' through remote server at 'http://markwinspear:3e478c65-7a2a-4119-b4a1-cb96b23e6ed5@ondemand.saucelabs.com:80/wd/hub'</msg>
+<status status="PASS" endtime="20150709 14:16:32.829" starttime="20150709 14:16:27.652"></status>
 </kw>
-<status status="PASS" endtime="20150709 13:43:06.756" starttime="20150709 13:43:01.120"></status>
+<status status="PASS" endtime="20150709 14:16:32.829" starttime="20150709 14:16:27.652"></status>
 </kw>
 <kw name="Login Should Fail When">
 <arguments>
@@ -27,17 +27,17 @@
 <arguments>
 <arg>http://the-internet.herokuapp.com/login</arg>
 </arguments>
-<msg timestamp="20150709 13:43:06.756" level="INFO">Opening url 'http://the-internet.herokuapp.com/login'</msg>
-<status status="PASS" endtime="20150709 13:43:09.666" starttime="20150709 13:43:06.756"></status>
+<msg timestamp="20150709 14:16:32.829" level="INFO">Opening url 'http://the-internet.herokuapp.com/login'</msg>
+<status status="PASS" endtime="20150709 14:16:40.606" starttime="20150709 14:16:32.829"></status>
 </kw>
 <kw name="Wait Until Page Contains" library="Selenium2Library">
 <doc>Waits until `text` appears on current page.</doc>
 <arguments>
 <arg>Login Page</arg>
 </arguments>
-<status status="PASS" endtime="20150709 13:43:10.012" starttime="20150709 13:43:09.666"></status>
+<status status="PASS" endtime="20150709 14:16:40.943" starttime="20150709 14:16:40.606"></status>
 </kw>
-<status status="PASS" endtime="20150709 13:43:10.012" starttime="20150709 13:43:06.756"></status>
+<status status="PASS" endtime="20150709 14:16:40.943" starttime="20150709 14:16:32.829"></status>
 </kw>
 <kw name="With" library="Login">
 <arguments>
@@ -50,17 +50,17 @@
 <arguments>
 <arg>http://the-internet.herokuapp.com/login</arg>
 </arguments>
-<msg timestamp="20150709 13:43:10.020" level="INFO">Opening url 'http://the-internet.herokuapp.com/login'</msg>
-<status status="PASS" endtime="20150709 13:43:10.976" starttime="20150709 13:43:10.020"></status>
+<msg timestamp="20150709 14:16:40.943" level="INFO">Opening url 'http://the-internet.herokuapp.com/login'</msg>
+<status status="PASS" endtime="20150709 14:16:41.808" starttime="20150709 14:16:40.943"></status>
 </kw>
 <kw name="Wait Until Page Contains" library="Selenium2Library">
 <doc>Waits until `text` appears on current page.</doc>
 <arguments>
 <arg>Login Page</arg>
 </arguments>
-<status status="PASS" endtime="20150709 13:43:11.375" starttime="20150709 13:43:10.976"></status>
+<status status="PASS" endtime="20150709 14:16:42.149" starttime="20150709 14:16:41.809"></status>
 </kw>
-<status status="PASS" endtime="20150709 13:43:11.375" starttime="20150709 13:43:10.020"></status>
+<status status="PASS" endtime="20150709 14:16:42.150" starttime="20150709 14:16:40.943"></status>
 </kw>
 <kw name="Enter Username" library="Login">
 <arguments>
@@ -69,13 +69,13 @@
 <kw name="Input Text" library="Selenium2Library">
 <doc>Types the given `text` into text field identified by `locator`.</doc>
 <arguments>
-<arg>id=username</arg>
+<arg>${username_locator}</arg>
 <arg>${username}</arg>
 </arguments>
-<msg timestamp="20150709 13:43:11.375" level="INFO">Typing text 'tomsmith' into text field 'id=username'</msg>
-<status status="PASS" endtime="20150709 13:43:12.725" starttime="20150709 13:43:11.375"></status>
+<msg timestamp="20150709 14:16:42.154" level="INFO">Typing text 'tomsmith' into text field 'id=username'</msg>
+<status status="PASS" endtime="20150709 14:16:43.437" starttime="20150709 14:16:42.153"></status>
 </kw>
-<status status="PASS" endtime="20150709 13:43:12.725" starttime="20150709 13:43:11.375"></status>
+<status status="PASS" endtime="20150709 14:16:43.441" starttime="20150709 14:16:42.151"></status>
 </kw>
 <kw name="Enter Password" library="Login">
 <arguments>
@@ -84,114 +84,39 @@
 <kw name="Input Text" library="Selenium2Library">
 <doc>Types the given `text` into text field identified by `locator`.</doc>
 <arguments>
-<arg>id=password</arg>
+<arg>${password_locator}</arg>
 <arg>${password}</arg>
 </arguments>
-<msg timestamp="20150709 13:43:12.725" level="INFO">Typing text 'Super' into text field 'id=password'</msg>
-<status status="PASS" endtime="20150709 13:43:14.110" starttime="20150709 13:43:12.725"></status>
+<msg timestamp="20150709 14:16:43.441" level="INFO">Typing text 'Super' into text field 'id=password'</msg>
+<status status="PASS" endtime="20150709 14:16:44.945" starttime="20150709 14:16:43.441"></status>
 </kw>
-<status status="PASS" endtime="20150709 13:43:14.110" starttime="20150709 13:43:12.725"></status>
+<status status="PASS" endtime="20150709 14:16:44.945" starttime="20150709 14:16:43.441"></status>
 </kw>
 <kw name="Click Login Button" library="Login">
 <kw name="Click Button" library="Selenium2Library">
 <doc>Clicks a button identified by `locator`.</doc>
 <arguments>
-<arg>xpath=//*[@id="login"]/button</arg>
+<arg>${loginButton_locator}</arg>
 </arguments>
-<msg timestamp="20150709 13:43:14.125" level="INFO">Clicking button 'xpath=//*[@id="login"]/button'.</msg>
-<status status="PASS" endtime="20150709 13:43:16.548" starttime="20150709 13:43:14.110"></status>
+<msg timestamp="20150709 14:16:44.949" level="INFO">Clicking button 'xpath=//*[@id="login"]/button'.</msg>
+<status status="PASS" endtime="20150709 14:16:47.230" starttime="20150709 14:16:44.945"></status>
 </kw>
-<status status="PASS" endtime="20150709 13:43:16.548" starttime="20150709 13:43:14.110"></status>
+<status status="PASS" endtime="20150709 14:16:47.230" starttime="20150709 14:16:44.945"></status>
 </kw>
-<status status="PASS" endtime="20150709 13:43:16.550" starttime="20150709 13:43:10.016"></status>
+<status status="PASS" endtime="20150709 14:16:47.246" starttime="20150709 14:16:40.943"></status>
 </kw>
 <kw name="Verify Login Fails" library="Login">
 <kw name="Page Should Contain Element" library="Selenium2Library">
 <doc>Verifies element identified by `locator` is found on the current page.</doc>
 <arguments>
-<arg>xpath=//*[@class="flash error"]</arg>
+<arg>${errorMessage_locator}</arg>
 </arguments>
-<msg timestamp="20150709 13:43:16.906" level="INFO">Current page contains element 'xpath=//*[@class="flash error"]'.</msg>
-<status status="PASS" endtime="20150709 13:43:16.906" starttime="20150709 13:43:16.550"></status>
+<msg timestamp="20150709 14:16:47.577" level="INFO">Current page contains element 'xpath=//*[@class="flash error"]'.</msg>
+<status status="PASS" endtime="20150709 14:16:47.577" starttime="20150709 14:16:47.246"></status>
 </kw>
-<kw name="Page Should Contain Element" library="Selenium2Library">
-<doc>Verifies element identified by `locator` is found on the current page.</doc>
-<arguments>
-<arg>xpath=//*[text()="Your username is invalid!" or text()="Your password is invalid!"]</arg>
-</arguments>
-<msg timestamp="20150709 13:43:17.728" level="INFO">&lt;!DOCTYPE html&gt;&lt;!--[if IE 8]&gt;         &lt;html class="no-js lt-ie9" lang="en" &gt; &lt;![endif]--&gt;&lt;!--[if gt IE 8]&gt;&lt;!--&gt;&lt;html xmlns="http://www.w3.org/1999/xhtml" class="no-js" lang="en"&gt;&lt;!--&lt;![endif]--&gt;&lt;head&gt;
-    &lt;script type="text/javascript" src="http://bam.nr-data.net/1/95e25f7a90?a=3982698&amp;amp;pl=1436449398985&amp;amp;v=632.2b17625&amp;amp;to=e1ZXEUNfVAoES0kxD1ZYTRdQH2sPD1gSEAcCA3gVQVxRBQBNDw0IF358MRFcVwEIVw%3D%3D&amp;amp;qt=14&amp;amp;ap=3&amp;amp;be=360&amp;amp;fe=174&amp;amp;dc=164&amp;amp;f=%5B%22err%22,%22xhr%22%5D&amp;amp;perf=%7B%22timing%22:%7B%22of%22:1436449398985,%22n%22:0,%22u%22:229,%22ue%22:240,%22dl%22:254,%22di%22:522,%22ds%22:522,%22de%22:531,%22dc%22:533,%22l%22:533,%22le%22:535,%22r%22:0,%22re%22:109,%22f%22:109,%22dn%22:109,%22dne%22:109,%22c%22:109,%22ce%22:109,%22rq%22:110,%22rp%22:227,%22rpe%22:300%7D,%22navigation%22:%7B%22rc%22:1%7D%7D&amp;amp;jsonp=NREUM.setToken"&gt;&lt;/script&gt;&lt;script src="http://js-agent.newrelic.com/nr-632.min.js"&gt;&lt;/script&gt;&lt;script src="/js/vendor/298279967.js"&gt;&lt;/script&gt;
-    &lt;meta charset="utf-8" /&gt;
-&lt;script type="text/javascript"&gt;window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"95e25f7a90","applicationID":"3982698","transactionName":"e1ZXEUNfVAoES0kxD1ZYTRdQH2sPD1gSEAcCA3gVQVxRBQBNDw0IF358MRFcVwEIVw==","queueTime":14,"applicationTime":3,"agent":"js-agent.newrelic.com/nr-632.min.js"}&lt;/script&gt;
-&lt;script type="text/javascript"&gt;(window.NREUM||(NREUM={})).loader_config={xpid:"Vw4AVFBaGwAJXFNUDgk="};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o?o:e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o&amp;lt;n.length;o++)r(n[o]);return r}({QJf3ax:[function(t,e){function n(t){function e(e,n,a){t&amp;amp;&amp;amp;t(e,n,a),a||(a={});for(var c=s(e),u=c.length,f=i(a,o,r),d=0;u&amp;gt;d;d++)c[d].apply(f,n);return f}function a(t,e){u[t]=s(t).concat(e)}function s(t){return u[t]||[]}function c(){return n(e)}var u={};return{on:a,emit:e,create:c,listeners:s,_events:u}}function r(){return{}}var o="nr@context",i=t("gos");e.exports=n()},{gos:"7eSDFh"}],ee:[function(t,e){e.exports=t("QJf3ax")},{}],3:[function(t){function e(t){try{i.console&amp;amp;&amp;amp;console.log(t)}catch(e){}}var n,r=t("ee"),o=t(1),i={};try{n=localStorage.getItem("__nr_flags").split(","),console&amp;amp;&amp;amp;"function"==typeof console.log&amp;amp;&amp;amp;(i.console=!0,-1!==n.indexOf("dev")&amp;amp;&amp;amp;(i.dev=!0),-1!==n.indexOf("nr_dev")&amp;amp;&amp;amp;(i.nrDev=!0))}catch(a){}i.nrDev&amp;amp;&amp;amp;r.on("internal-error",function(t){e(t.stack)}),i.dev&amp;amp;&amp;amp;r.on("fn-err",function(t,n,r){e(r.stack)}),i.dev&amp;amp;&amp;amp;(e("NR AGENT IN DEVELOPMENT MODE"),e("flags: "+o(i,function(t){return t}).join(", ")))},{1:20,ee:"QJf3ax"}],4:[function(t){function e(t,e,n,i,s){try{c?c-=1:r("err",[s||new UncaughtException(t,e,n)])}catch(u){try{r("ierr",[u,(new Date).getTime(),!0])}catch(f){}}return"function"==typeof a?a.apply(this,o(arguments)):!1}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function n(t){r("err",[t,(new Date).getTime()])}var r=t("handle"),o=t(6),i=t("ee"),a=window.onerror,s=!1,c=0;t("loader").features.err=!0,t(3),window.onerror=e;try{throw new Error}catch(u){"stack"in u&amp;amp;&amp;amp;(t(4),t(5),"addEventListener"in window&amp;amp;&amp;amp;t(1),window.XMLHttpRequest&amp;amp;&amp;amp;XMLHttpRequest.prototype&amp;amp;&amp;amp;XMLHttpRequest.prototype.addEventListener&amp;amp;&amp;amp;window.XMLHttpRequest&amp;amp;&amp;amp;XMLHttpRequest.prototype&amp;amp;&amp;amp;XMLHttpRequest.prototype.addEventListener&amp;amp;&amp;amp;!/CriOS/.test(navigator.userAgent)&amp;amp;&amp;amp;t(2),s=!0)}i.on("fn-start",function(){s&amp;amp;&amp;amp;(c+=1)}),i.on("fn-err",function(t,e,r){s&amp;amp;&amp;amp;(this.thrown=!0,n(r))}),i.on("fn-end",function(){s&amp;amp;&amp;amp;!this.thrown&amp;amp;&amp;amp;c&amp;gt;0&amp;amp;&amp;amp;(c-=1)}),i.on("internal-error",function(t){r("ierr",[t,(new Date).getTime(),!0])})},{1:5,2:8,3:3,4:7,5:6,6:21,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],5:[function(t,e){function n(t){i.inPlace(t,["addEventListener","removeEventListener"],"-",r)}function r(t){return t[1]}var o=(t(1),t("ee").create()),i=t(2)(o),a=t("gos");if(e.exports=o,n(window),"getPrototypeOf"in Object){for(var s=document;s&amp;amp;&amp;amp;!s.hasOwnProperty("addEventListener");)s=Object.getPrototypeOf(s);s&amp;amp;&amp;amp;n(s);for(var c=XMLHttpRequest.prototype;c&amp;amp;&amp;amp;!c.hasOwnProperty("addEventListener");)c=Object.getPrototypeOf(c);c&amp;amp;&amp;amp;n(c)}else XMLHttpRequest.prototype.hasOwnProperty("addEventListener")&amp;amp;&amp;amp;n(XMLHttpRequest.prototype);o.on("addEventListener-start",function(t){if(t[1]){var e=t[1];"function"==typeof e?this.wrapped=t[1]=a(e,"nr@wrapped",function(){return i(e,"fn-",null,e.name||"anonymous")}):"function"==typeof e.handleEvent&amp;amp;&amp;amp;i.inPlace(e,["handleEvent"],"fn-")}}),o.on("removeEventListener-start",function(t){var e=this.wrapped;e&amp;amp;&amp;amp;(t[1]=e)})},{1:21,2:22,ee:"QJf3ax",gos:"7eSDFh"}],6:[function(t,e){var n=(t(2),t("ee").create()),r=t(1)(n);e.exports=n,r.inPlace(window,["requestAnimationFrame","mozRequestAnimationFrame","webkitRequestAnimationFrame","msRequestAnimationFrame"],"raf-"),n.on("raf-start",function(t){t[0]=r(t[0],"fn-")})},{1:22,2:21,ee:"QJf3ax"}],7:[function(t,e){function n(t,e,n){t[0]=o(t[0],"fn-",null,n)}var r=(t(2),t("ee").create()),o=t(1)(r);e.exports=r,o.inPlace(window,["setTimeout","setInterval","setImmediate"],"setTimer-"),r.on("setTimer-start",n)},{1:22,2:21,ee:"QJf3ax"}],8:[function(t,e){function n(){u.inPlace(this,p,"fn-")}function r(t,e){u.inPlace(e,["onreadystatechange"],"fn-")}function o(t,e){return e}function i(t,e){for(var n in t)e[n]=t[n];return e}var a=t("ee").create(),s=t(1),c=t(2),u=c(a),f=c(s),d=window.XMLHttpRequest,p=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"];e.exports=a,window.XMLHttpRequest=function(t){var e=new d(t);try{a.emit("new-xhr",[],e),f.inPlace(e,["addEventListener","removeEventListener"],"-",o),e.addEventListener("readystatechange",n,!1)}catch(r){try{a.emit("internal-error",[r])}catch(i){}}return e},i(d,XMLHttpRequest),XMLHttpRequest.prototype=d.prototype,u.inPlace(XMLHttpRequest.prototype,["open","send"],"-xhr-",o),a.on("send-xhr-start",r),a.on("open-xhr-start",r)},{1:5,2:22,ee:"QJf3ax"}],9:[function(t){function e(t){var e=this.params,r=this.metrics;if(!this.ended){this.ended=!0;for(var i=0;c&amp;gt;i;i++)t.removeEventListener(s[i],this.listener,!1);if(!e.aborted){if(r.duration=(new Date).getTime()-this.startTime,4===t.readyState){e.status=t.status;var a=t.responseType,u="arraybuffer"===a||"blob"===a||"json"===a?t.response:t.responseText,f=n(u);if(f&amp;amp;&amp;amp;(r.rxSize=f),this.sameOrigin){var d=t.getResponseHeader("X-NewRelic-App-Data");d&amp;amp;&amp;amp;(e.cat=d.split(", ").pop())}}else e.status=0;r.cbTime=this.cbTime,o("xhr",[e,r,this.startTime])}}}function n(t){if("string"==typeof t&amp;amp;&amp;amp;t.length)return t.length;if("object"!=typeof t)return void 0;if("undefined"!=typeof ArrayBuffer&amp;amp;&amp;amp;t instanceof ArrayBuffer&amp;amp;&amp;amp;t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&amp;amp;&amp;amp;t instanceof Blob&amp;amp;&amp;amp;t.size)return t.size;if("undefined"!=typeof FormData&amp;amp;&amp;amp;t instanceof FormData)return void 0;try{return JSON.stringify(t).length}catch(e){return void 0}}function r(t,e){var n=i(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.sameOrigin=n.sameOrigin}if(window.XMLHttpRequest&amp;amp;&amp;amp;XMLHttpRequest.prototype&amp;amp;&amp;amp;XMLHttpRequest.prototype.addEventListener&amp;amp;&amp;amp;!/CriOS/.test(navigator.userAgent)){t("loader").features.xhr=!0;var o=t("handle"),i=t(2),a=t("ee"),s=["load","error","abort","timeout"],c=s.length,u=t(1);t(4),t(3),a.on("new-xhr",function(){this.totalCbs=0,this.called=0,this.cbTime=0,this.end=e,this.ended=!1,this.xhrGuids={}}),a.on("open-xhr-start",function(t){this.params={method:t[0]},r(this,t[1]),this.metrics={}}),a.on("open-xhr-end",function(t,e){"loader_config"in NREUM&amp;amp;&amp;amp;"xpid"in NREUM.loader_config&amp;amp;&amp;amp;this.sameOrigin&amp;amp;&amp;amp;e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),a.on("send-xhr-start",function(t,e){var r=this.metrics,o=t[0],i=this;if(r&amp;amp;&amp;amp;o){var u=n(o);u&amp;amp;&amp;amp;(r.txSize=u)}this.startTime=(new Date).getTime(),this.listener=function(t){try{"abort"===t.type&amp;amp;&amp;amp;(i.params.aborted=!0),("load"!==t.type||i.called===i.totalCbs&amp;amp;&amp;amp;(i.onloadCalled||"function"!=typeof e.onload))&amp;amp;&amp;amp;i.end(e)}catch(n){try{a.emit("internal-error",[n])}catch(r){}}};for(var f=0;c&amp;gt;f;f++)e.addEventListener(s[f],this.listener,!1)}),a.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&amp;amp;&amp;amp;"function"==typeof n.onload||this.end(n)}),a.on("xhr-load-added",function(t,e){var n=""+u(t)+!!e;this.xhrGuids&amp;amp;&amp;amp;!this.xhrGuids[n]&amp;amp;&amp;amp;(this.xhrGuids[n]=!0,this.totalCbs+=1)}),a.on("xhr-load-removed",function(t,e){var n=""+u(t)+!!e;this.xhrGuids&amp;amp;&amp;amp;this.xhrGuids[n]&amp;amp;&amp;amp;(delete this.xhrGuids[n],this.totalCbs-=1)}),a.on("addEventListener-end",function(t,e){e instanceof XMLHttpRequest&amp;amp;&amp;amp;"load"===t[0]&amp;amp;&amp;amp;a.emit("xhr-load-added",[t[1],t[2]],e)}),a.on("removeEventListener-end",function(t,e){e instanceof XMLHttpRequest&amp;amp;&amp;amp;"load"===t[0]&amp;amp;&amp;amp;a.emit("xhr-load-removed",[t[1],t[2]],e)}),a.on("fn-start",function(t,e,n){e instanceof XMLHttpRequest&amp;amp;&amp;amp;("onload"===n&amp;amp;&amp;amp;(this.onload=!0),("load"===(t[0]&amp;amp;&amp;amp;t[0].type)||this.onload)&amp;amp;&amp;amp;(this.xhrCbStart=(new Date).getTime()))}),a.on("fn-end",function(t,e){this.xhrCbStart&amp;amp;&amp;amp;a.emit("xhr-cb-time",[(new Date).getTime()-this.xhrCbStart,this.onload,e],e)})}},{1:"XL7HBI",2:10,3:8,4:5,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],10:[function(t,e){e.exports=function(t){var e=document.createElement("a"),n=window.location,r={};e.href=t,r.port=e.port;var o=e.href.split("://");return!r.port&amp;amp;&amp;amp;o[1]&amp;amp;&amp;amp;(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&amp;amp;&amp;amp;"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=e.hostname||n.hostname,r.pathname=e.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&amp;amp;&amp;amp;(r.pathname="/"+r.pathname),r.sameOrigin=!e.hostname||e.hostname===document.domain&amp;amp;&amp;amp;e.port===n.port&amp;amp;&amp;amp;e.protocol===n.protocol,r}},{}],11:[function(t,e){function n(t){return function(){r(t,[(new Date).getTime()].concat(i(arguments)))}}var r=t("handle"),o=t(1),i=t(2);"undefined"==typeof window.newrelic&amp;amp;&amp;amp;(newrelic=window.NREUM);var a=["setPageViewName","addPageAction","setCustomAttribute","finished","addToTrace","inlineHit","noticeError"];o(a,function(t,e){window.NREUM[e]=n("api-"+e)}),e.exports=window.NREUM},{1:20,2:21,handle:"D5DuLP"}],"7eSDFh":[function(t,e){function n(t,e,n){if(r.call(t,e))return t[e];var o=n();if(Object.defineProperty&amp;amp;&amp;amp;Object.keys)try{return Object.defineProperty(t,e,{value:o,writable:!0,enumerable:!1}),o}catch(i){}return t[e]=o,o}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],gos:[function(t,e){e.exports=t("7eSDFh")},{}],handle:[function(t,e){e.exports=t("D5DuLP")},{}],D5DuLP:[function(t,e){function n(t,e,n){return r.listeners(t).length?r.emit(t,e,n):(o[t]||(o[t]=[]),void o[t].push(e))}var r=t("ee").create(),o={};e.exports=n,n.ee=r,r.q=o},{ee:"QJf3ax"}],id:[function(t,e){e.exports=t("XL7HBI")},{}],XL7HBI:[function(t,e){function n(t){var e=typeof t;return!t||"object"!==e&amp;amp;&amp;amp;"function"!==e?-1:t===window?0:i(t,o,function(){return r++})}var r=1,o="nr@id",i=t("gos");e.exports=n},{gos:"7eSDFh"}],G9z0Bl:[function(t,e){function n(){var t=p.info=NREUM.info,e=u.getElementsByTagName("script")[0];if(t&amp;amp;&amp;amp;t.licenseKey&amp;amp;&amp;amp;t.applicationID&amp;amp;&amp;amp;e){s(d,function(e,n){e in t||(t[e]=n)});var n="https"===f.split(":")[0]||t.sslForHttp;p.proto=n?"https://":"http://",a("mark",["onload",i()]);var r=u.createElement("script");r.src=p.proto+t.agent,e.parentNode.insertBefore(r,e)}}function r(){"complete"===u.readyState&amp;amp;&amp;amp;o()}function o(){a("mark",["domContent",i()])}function i(){return(new Date).getTime()}var a=t("handle"),s=t(1),c=(t(2),window),u=c.document,f=(""+location).split("?")[0],d={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-632.min.js"},p=e.exports={offset:i(),origin:f,features:{}};u.addEventListener?(u.addEventListener("DOMContentLoaded",o,!1),c.addEventListener("load",n,!1)):(u.attachEvent("onreadystatechange",r),c.attachEvent("onload",n)),a("mark",["firstbyte",i()])},{1:20,2:11,handle:"D5DuLP"}],loader:[function(t,e){e.exports=t("G9z0Bl")},{}],20:[function(t,e){function n(t,e){var n=[],o="",i=0;for(o in t)r.call(t,o)&amp;amp;&amp;amp;(n[i]=e(o,t[o]),i+=1);return n}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],21:[function(t,e){function n(t,e,n){e||(e=0),"undefined"==typeof n&amp;amp;&amp;amp;(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(0&amp;gt;o?0:o);++r&amp;lt;o;)i[r]=t[e+r];return i}e.exports=n},{}],22:[function(t,e){function n(t){return!(t&amp;amp;&amp;amp;"function"==typeof t&amp;amp;&amp;amp;t.apply&amp;amp;&amp;amp;!t[i])}var r=t("ee"),o=t(1),i="nr@wrapper",a=Object.prototype.hasOwnProperty;e.exports=function(t){function e(t,e,r,a){function nrWrapper(){var n,i,s,u;try{i=this,n=o(arguments),s=r&amp;amp;&amp;amp;r(n,i)||{}}catch(d){f([d,"",[n,i,a],s])}c(e+"start",[n,i,a],s);try{return u=t.apply(i,n)}catch(p){throw c(e+"err",[n,i,p],s),p}finally{c(e+"end",[n,i,u],s)}}return n(t)?t:(e||(e=""),nrWrapper[i]=!0,u(t,nrWrapper),nrWrapper)}function s(t,r,o,i){o||(o="");var a,s,c,u="-"===o.charAt(0);for(c=0;c&amp;lt;r.length;c++)s=r[c],a=t[s],n(a)||(t[s]=e(a,u?s+o:o,i,s))}function c(e,n,r){try{t.emit(e,n,r)}catch(o){f([o,e,n,r])}}function u(t,e){if(Object.defineProperty&amp;amp;&amp;amp;Object.keys)try{var n=Object.keys(t);return n.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(r){f([r])}for(var o in t)a.call(t,o)&amp;amp;&amp;amp;(e[o]=t[o]);return e}function f(e){try{t.emit("internal-error",e)}catch(n){}}return t||(t=r),e.inPlace=s,e.flag=i,e}},{1:21,ee:"QJf3ax"}]},{},["G9z0Bl",4,9]);&lt;/script&gt;
-    &lt;meta name="viewport" content="width=device-width" /&gt;
-    &lt;title&gt;The Internet&lt;/title&gt;
-    &lt;link href="/css/app.css" rel="stylesheet" /&gt;
-    &lt;link href="/css/font-awesome.css" rel="stylesheet" /&gt;
-    &lt;script src="/js/vendor/jquery-1.11.3.min.js"&gt;&lt;/script&gt;
-    &lt;script src="/js/vendor/jquery-ui-1.11.4/jquery-ui.js"&gt;&lt;/script&gt;
-    &lt;script src="/js/foundation/foundation.js"&gt;&lt;/script&gt;&lt;meta class="foundation-mq-small" /&gt;&lt;meta class="foundation-mq-medium" /&gt;&lt;meta class="foundation-mq-large" /&gt;&lt;style&gt;&lt;/style&gt;
-    &lt;script src="/js/foundation/foundation.alerts.js"&gt;&lt;/script&gt;
-    &lt;script&gt;
-      $(document).foundation();
-    &lt;/script&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-    &lt;div class="row"&gt;
-      &lt;div id="flash-messages" class="large-12 columns"&gt;
-      
-        
-      
-        
-          &lt;div data-alert="" id="flash" class="flash error"&gt;
-            Your password is invalid!
-            &lt;a href="#" class="close"&gt;×&lt;/a&gt;
-          &lt;/div&gt;
-        
-      
-        
-      
-      &lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div class="row"&gt;
-      &lt;a href="https://github.com/tourdedave/the-internet"&gt;&lt;img style="position: absolute; top: 0; right: 0; border: 0;" src="/img/forkme_right_green_007200.png" alt="Fork me on GitHub" /&gt;&lt;/a&gt;
-      &lt;div id="content" class="large-12 columns"&gt;
-        &lt;div class="example"&gt;
-  &lt;h2&gt;Login Page&lt;/h2&gt;
-  &lt;h4 class="subheader"&gt;This is where you can log into the secure area. Enter &lt;em&gt;tomsmith&lt;/em&gt; for the username and &lt;em&gt;SuperSecretPassword!&lt;/em&gt; for the password. If the information is wrong you should see error messages.&lt;/h4&gt;
-  &lt;form name="login" id="login" action="/authenticate" method="post"&gt;
-     &lt;div class="row"&gt;
-      &lt;div class="large-6 small-12 columns"&gt;
-        &lt;label for="username"&gt;Username&lt;/label&gt;
-        &lt;input type="text" name="username" id="username" /&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div class="row"&gt;
-      &lt;div class="large-6 small-12 columns"&gt;
-        &lt;label for="password"&gt;Password&lt;/label&gt;
-        &lt;input type="password" name="password" id="password" /&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-      &lt;button class="radius" type="submit"&gt;&lt;i class="fa fa-2x fa-sign-in"&gt; Login&lt;/i&gt;&lt;/button&gt;
-  &lt;/form&gt;
-&lt;/div&gt;
-
-      &lt;/div&gt;
-    &lt;/div&gt;
-  
-
-&lt;/body&gt;&lt;/html&gt;</msg>
-<kw name="Capture Page Screenshot" library="Selenium2Library">
-<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
-<msg timestamp="20150709 13:43:18.702" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" endtime="20150709 13:43:18.702" starttime="20150709 13:43:17.730"></status>
+<status status="PASS" endtime="20150709 14:16:47.577" starttime="20150709 14:16:47.246"></status>
 </kw>
-<msg timestamp="20150709 13:43:18.702" level="FAIL">Page should have contained element 'xpath=//*[text()="Your username is invalid!" or text()="Your password is invalid!"]' but did not</msg>
-<status status="FAIL" endtime="20150709 13:43:18.702" starttime="20150709 13:43:16.906"></status>
-</kw>
-<status status="FAIL" endtime="20150709 13:43:18.702" starttime="20150709 13:43:16.550"></status>
-</kw>
-<status status="FAIL" endtime="20150709 13:43:18.702" starttime="20150709 13:43:06.756"></status>
+<status status="PASS" endtime="20150709 14:16:47.577" starttime="20150709 14:16:32.829"></status>
 </kw>
 <kw type="teardown" name="End Web Test" library="Common">
 <kw name="Run Keyword If" library="BuiltIn">
@@ -211,480 +136,32 @@
 <arg>${TEST_TAGS}</arg>
 <arg>${REMOTE_URL}</arg>
 </arguments>
-<msg timestamp="20150709 13:43:18.739" level="INFO">Starting new HTTPS connection (1): saucelabs.com</msg>
-<msg timestamp="20150709 13:43:19.873" html="yes" level="INFO">&lt;a href="https://saucelabs.com/jobs/7c000d202e48495eb370cc0119d9ff4b/video.flv"&gt;video.flv&lt;/a&gt;</msg>
-<status status="PASS" endtime="20150709 13:43:19.873" starttime="20150709 13:43:18.719"></status>
+<msg timestamp="20150709 14:16:47.593" level="INFO">Starting new HTTPS connection (1): saucelabs.com</msg>
+<msg timestamp="20150709 14:16:48.668" html="yes" level="INFO">&lt;a href="https://saucelabs.com/jobs/11254880594f489e983ee64718c82951/video.flv"&gt;video.flv&lt;/a&gt;</msg>
+<status status="PASS" endtime="20150709 14:16:48.668" starttime="20150709 14:16:47.593"></status>
 </kw>
-<status status="PASS" endtime="20150709 13:43:19.873" starttime="20150709 13:43:18.719"></status>
-</kw>
-<kw name="Close Browser" library="Selenium2Library">
-<doc>Closes the current browser.</doc>
-<status status="PASS" endtime="20150709 13:43:20.316" starttime="20150709 13:43:19.873"></status>
-</kw>
-<status status="PASS" endtime="20150709 13:43:20.316" starttime="20150709 13:43:18.715"></status>
-</kw>
-<status status="FAIL" endtime="20150709 13:43:20.316" critical="yes" starttime="20150709 13:43:01.120">Page should have contained element 'xpath=//*[text()="Your username is invalid!" or text()="Your password is invalid!"]' but did not</status>
-</test>
-<test id="s1-t2" name="The Password is empty">
-<kw type="setup" name="Begin Web Test" library="Common">
-<kw name="Open Browser" library="Selenium2Library">
-<doc>Opens a new browser instance to given URL.</doc>
-<arguments>
-<arg>about:blank</arg>
-<arg>${BROWSER}</arg>
-<arg>remote_url=${REMOTE_URL}</arg>
-<arg>desired_capabilities=${DESIRED_CAPABILITIES}</arg>
-</arguments>
-<msg timestamp="20150709 13:43:20.320" level="INFO">Opening browser 'ie' to base url 'about:blank' through remote server at 'http://markwinspear:3e478c65-7a2a-4119-b4a1-cb96b23e6ed5@ondemand.saucelabs.com:80/wd/hub'</msg>
-<status status="PASS" endtime="20150709 13:43:26.096" starttime="20150709 13:43:20.320"></status>
-</kw>
-<status status="PASS" endtime="20150709 13:43:26.096" starttime="20150709 13:43:20.320"></status>
-</kw>
-<kw name="Login Should Fail When">
-<arguments>
-<arg>tomsmith</arg>
-<arg>${empty}</arg>
-</arguments>
-<kw name="Load" library="Login">
-<kw name="Go To" library="Selenium2Library">
-<doc>Navigates the active browser instance to the provided URL.</doc>
-<arguments>
-<arg>http://the-internet.herokuapp.com/login</arg>
-</arguments>
-<msg timestamp="20150709 13:43:26.113" level="INFO">Opening url 'http://the-internet.herokuapp.com/login'</msg>
-<status status="PASS" endtime="20150709 13:43:28.555" starttime="20150709 13:43:26.113"></status>
-</kw>
-<kw name="Wait Until Page Contains" library="Selenium2Library">
-<doc>Waits until `text` appears on current page.</doc>
-<arguments>
-<arg>Login Page</arg>
-</arguments>
-<status status="PASS" endtime="20150709 13:43:28.911" starttime="20150709 13:43:28.555"></status>
-</kw>
-<status status="PASS" endtime="20150709 13:43:28.911" starttime="20150709 13:43:26.113"></status>
-</kw>
-<kw name="With" library="Login">
-<arguments>
-<arg>${username}</arg>
-<arg>${password}</arg>
-</arguments>
-<kw name="Load" library="Login">
-<kw name="Go To" library="Selenium2Library">
-<doc>Navigates the active browser instance to the provided URL.</doc>
-<arguments>
-<arg>http://the-internet.herokuapp.com/login</arg>
-</arguments>
-<msg timestamp="20150709 13:43:28.927" level="INFO">Opening url 'http://the-internet.herokuapp.com/login'</msg>
-<status status="PASS" endtime="20150709 13:43:29.840" starttime="20150709 13:43:28.927"></status>
-</kw>
-<kw name="Wait Until Page Contains" library="Selenium2Library">
-<doc>Waits until `text` appears on current page.</doc>
-<arguments>
-<arg>Login Page</arg>
-</arguments>
-<status status="PASS" endtime="20150709 13:43:30.236" starttime="20150709 13:43:29.840"></status>
-</kw>
-<status status="PASS" endtime="20150709 13:43:30.236" starttime="20150709 13:43:28.927"></status>
-</kw>
-<kw name="Enter Username" library="Login">
-<arguments>
-<arg>${username}</arg>
-</arguments>
-<kw name="Input Text" library="Selenium2Library">
-<doc>Types the given `text` into text field identified by `locator`.</doc>
-<arguments>
-<arg>id=username</arg>
-<arg>${username}</arg>
-</arguments>
-<msg timestamp="20150709 13:43:30.236" level="INFO">Typing text 'tomsmith' into text field 'id=username'</msg>
-<status status="PASS" endtime="20150709 13:43:31.644" starttime="20150709 13:43:30.236"></status>
-</kw>
-<status status="PASS" endtime="20150709 13:43:31.644" starttime="20150709 13:43:30.236"></status>
-</kw>
-<kw name="Enter Password" library="Login">
-<arguments>
-<arg>${password}</arg>
-</arguments>
-<kw name="Input Text" library="Selenium2Library">
-<doc>Types the given `text` into text field identified by `locator`.</doc>
-<arguments>
-<arg>id=password</arg>
-<arg>${password}</arg>
-</arguments>
-<msg timestamp="20150709 13:43:31.644" level="INFO">Typing text '' into text field 'id=password'</msg>
-<status status="PASS" endtime="20150709 13:43:32.988" starttime="20150709 13:43:31.644"></status>
-</kw>
-<status status="PASS" endtime="20150709 13:43:32.988" starttime="20150709 13:43:31.644"></status>
-</kw>
-<kw name="Click Login Button" library="Login">
-<kw name="Click Button" library="Selenium2Library">
-<doc>Clicks a button identified by `locator`.</doc>
-<arguments>
-<arg>xpath=//*[@id="login"]/button</arg>
-</arguments>
-<msg timestamp="20150709 13:43:32.992" level="INFO">Clicking button 'xpath=//*[@id="login"]/button'.</msg>
-<status status="PASS" endtime="20150709 13:43:35.519" starttime="20150709 13:43:32.992"></status>
-</kw>
-<status status="PASS" endtime="20150709 13:43:35.519" starttime="20150709 13:43:32.988"></status>
-</kw>
-<status status="PASS" endtime="20150709 13:43:35.519" starttime="20150709 13:43:28.911"></status>
-</kw>
-<kw name="Verify Login Fails" library="Login">
-<kw name="Page Should Contain Element" library="Selenium2Library">
-<doc>Verifies element identified by `locator` is found on the current page.</doc>
-<arguments>
-<arg>xpath=//*[@class="flash error"]</arg>
-</arguments>
-<msg timestamp="20150709 13:43:35.882" level="INFO">Current page contains element 'xpath=//*[@class="flash error"]'.</msg>
-<status status="PASS" endtime="20150709 13:43:35.882" starttime="20150709 13:43:35.519"></status>
-</kw>
-<kw name="Page Should Contain Element" library="Selenium2Library">
-<doc>Verifies element identified by `locator` is found on the current page.</doc>
-<arguments>
-<arg>xpath=//*[text()="Your username is invalid!" or text()="Your password is invalid!"]</arg>
-</arguments>
-<msg timestamp="20150709 13:43:36.730" level="INFO">&lt;!DOCTYPE html&gt;&lt;!--[if IE 8]&gt;         &lt;html class="no-js lt-ie9" lang="en" &gt; &lt;![endif]--&gt;&lt;!--[if gt IE 8]&gt;&lt;!--&gt;&lt;html xmlns="http://www.w3.org/1999/xhtml" class="no-js" lang="en"&gt;&lt;!--&lt;![endif]--&gt;&lt;head&gt;
-    &lt;script type="text/javascript" src="http://bam.nr-data.net/1/95e25f7a90?a=3982698&amp;amp;pl=1436449412980&amp;amp;v=632.2b17625&amp;amp;to=e1ZXEUNfVAoES0kxD1ZYTRdQH2sPD1gSEAcCA3gVQVxRBQBNDw0IF358MRFcVwEIVw%3D%3D&amp;amp;qt=13&amp;amp;ap=8&amp;amp;be=415&amp;amp;fe=199&amp;amp;dc=188&amp;amp;f=%5B%22err%22,%22xhr%22%5D&amp;amp;perf=%7B%22timing%22:%7B%22of%22:1436449412980,%22n%22:0,%22u%22:263,%22ue%22:269,%22dl%22:279,%22di%22:600,%22ds%22:600,%22de%22:610,%22dc%22:614,%22l%22:614,%22le%22:614,%22r%22:0,%22re%22:119,%22f%22:119,%22dn%22:119,%22dne%22:119,%22c%22:119,%22ce%22:119,%22rq%22:119,%22rp%22:260,%22rpe%22:334%7D,%22navigation%22:%7B%22rc%22:1%7D%7D&amp;amp;jsonp=NREUM.setToken"&gt;&lt;/script&gt;&lt;script src="http://js-agent.newrelic.com/nr-632.min.js"&gt;&lt;/script&gt;&lt;script src="/js/vendor/298279967.js"&gt;&lt;/script&gt;
-    &lt;meta charset="utf-8" /&gt;
-&lt;script type="text/javascript"&gt;window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"95e25f7a90","applicationID":"3982698","transactionName":"e1ZXEUNfVAoES0kxD1ZYTRdQH2sPD1gSEAcCA3gVQVxRBQBNDw0IF358MRFcVwEIVw==","queueTime":13,"applicationTime":8,"agent":"js-agent.newrelic.com/nr-632.min.js"}&lt;/script&gt;
-&lt;script type="text/javascript"&gt;(window.NREUM||(NREUM={})).loader_config={xpid:"Vw4AVFBaGwAJXFNUDgk="};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o?o:e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o&amp;lt;n.length;o++)r(n[o]);return r}({QJf3ax:[function(t,e){function n(t){function e(e,n,a){t&amp;amp;&amp;amp;t(e,n,a),a||(a={});for(var c=s(e),u=c.length,f=i(a,o,r),d=0;u&amp;gt;d;d++)c[d].apply(f,n);return f}function a(t,e){u[t]=s(t).concat(e)}function s(t){return u[t]||[]}function c(){return n(e)}var u={};return{on:a,emit:e,create:c,listeners:s,_events:u}}function r(){return{}}var o="nr@context",i=t("gos");e.exports=n()},{gos:"7eSDFh"}],ee:[function(t,e){e.exports=t("QJf3ax")},{}],3:[function(t){function e(t){try{i.console&amp;amp;&amp;amp;console.log(t)}catch(e){}}var n,r=t("ee"),o=t(1),i={};try{n=localStorage.getItem("__nr_flags").split(","),console&amp;amp;&amp;amp;"function"==typeof console.log&amp;amp;&amp;amp;(i.console=!0,-1!==n.indexOf("dev")&amp;amp;&amp;amp;(i.dev=!0),-1!==n.indexOf("nr_dev")&amp;amp;&amp;amp;(i.nrDev=!0))}catch(a){}i.nrDev&amp;amp;&amp;amp;r.on("internal-error",function(t){e(t.stack)}),i.dev&amp;amp;&amp;amp;r.on("fn-err",function(t,n,r){e(r.stack)}),i.dev&amp;amp;&amp;amp;(e("NR AGENT IN DEVELOPMENT MODE"),e("flags: "+o(i,function(t){return t}).join(", ")))},{1:20,ee:"QJf3ax"}],4:[function(t){function e(t,e,n,i,s){try{c?c-=1:r("err",[s||new UncaughtException(t,e,n)])}catch(u){try{r("ierr",[u,(new Date).getTime(),!0])}catch(f){}}return"function"==typeof a?a.apply(this,o(arguments)):!1}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function n(t){r("err",[t,(new Date).getTime()])}var r=t("handle"),o=t(6),i=t("ee"),a=window.onerror,s=!1,c=0;t("loader").features.err=!0,t(3),window.onerror=e;try{throw new Error}catch(u){"stack"in u&amp;amp;&amp;amp;(t(4),t(5),"addEventListener"in window&amp;amp;&amp;amp;t(1),window.XMLHttpRequest&amp;amp;&amp;amp;XMLHttpRequest.prototype&amp;amp;&amp;amp;XMLHttpRequest.prototype.addEventListener&amp;amp;&amp;amp;window.XMLHttpRequest&amp;amp;&amp;amp;XMLHttpRequest.prototype&amp;amp;&amp;amp;XMLHttpRequest.prototype.addEventListener&amp;amp;&amp;amp;!/CriOS/.test(navigator.userAgent)&amp;amp;&amp;amp;t(2),s=!0)}i.on("fn-start",function(){s&amp;amp;&amp;amp;(c+=1)}),i.on("fn-err",function(t,e,r){s&amp;amp;&amp;amp;(this.thrown=!0,n(r))}),i.on("fn-end",function(){s&amp;amp;&amp;amp;!this.thrown&amp;amp;&amp;amp;c&amp;gt;0&amp;amp;&amp;amp;(c-=1)}),i.on("internal-error",function(t){r("ierr",[t,(new Date).getTime(),!0])})},{1:5,2:8,3:3,4:7,5:6,6:21,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],5:[function(t,e){function n(t){i.inPlace(t,["addEventListener","removeEventListener"],"-",r)}function r(t){return t[1]}var o=(t(1),t("ee").create()),i=t(2)(o),a=t("gos");if(e.exports=o,n(window),"getPrototypeOf"in Object){for(var s=document;s&amp;amp;&amp;amp;!s.hasOwnProperty("addEventListener");)s=Object.getPrototypeOf(s);s&amp;amp;&amp;amp;n(s);for(var c=XMLHttpRequest.prototype;c&amp;amp;&amp;amp;!c.hasOwnProperty("addEventListener");)c=Object.getPrototypeOf(c);c&amp;amp;&amp;amp;n(c)}else XMLHttpRequest.prototype.hasOwnProperty("addEventListener")&amp;amp;&amp;amp;n(XMLHttpRequest.prototype);o.on("addEventListener-start",function(t){if(t[1]){var e=t[1];"function"==typeof e?this.wrapped=t[1]=a(e,"nr@wrapped",function(){return i(e,"fn-",null,e.name||"anonymous")}):"function"==typeof e.handleEvent&amp;amp;&amp;amp;i.inPlace(e,["handleEvent"],"fn-")}}),o.on("removeEventListener-start",function(t){var e=this.wrapped;e&amp;amp;&amp;amp;(t[1]=e)})},{1:21,2:22,ee:"QJf3ax",gos:"7eSDFh"}],6:[function(t,e){var n=(t(2),t("ee").create()),r=t(1)(n);e.exports=n,r.inPlace(window,["requestAnimationFrame","mozRequestAnimationFrame","webkitRequestAnimationFrame","msRequestAnimationFrame"],"raf-"),n.on("raf-start",function(t){t[0]=r(t[0],"fn-")})},{1:22,2:21,ee:"QJf3ax"}],7:[function(t,e){function n(t,e,n){t[0]=o(t[0],"fn-",null,n)}var r=(t(2),t("ee").create()),o=t(1)(r);e.exports=r,o.inPlace(window,["setTimeout","setInterval","setImmediate"],"setTimer-"),r.on("setTimer-start",n)},{1:22,2:21,ee:"QJf3ax"}],8:[function(t,e){function n(){u.inPlace(this,p,"fn-")}function r(t,e){u.inPlace(e,["onreadystatechange"],"fn-")}function o(t,e){return e}function i(t,e){for(var n in t)e[n]=t[n];return e}var a=t("ee").create(),s=t(1),c=t(2),u=c(a),f=c(s),d=window.XMLHttpRequest,p=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"];e.exports=a,window.XMLHttpRequest=function(t){var e=new d(t);try{a.emit("new-xhr",[],e),f.inPlace(e,["addEventListener","removeEventListener"],"-",o),e.addEventListener("readystatechange",n,!1)}catch(r){try{a.emit("internal-error",[r])}catch(i){}}return e},i(d,XMLHttpRequest),XMLHttpRequest.prototype=d.prototype,u.inPlace(XMLHttpRequest.prototype,["open","send"],"-xhr-",o),a.on("send-xhr-start",r),a.on("open-xhr-start",r)},{1:5,2:22,ee:"QJf3ax"}],9:[function(t){function e(t){var e=this.params,r=this.metrics;if(!this.ended){this.ended=!0;for(var i=0;c&amp;gt;i;i++)t.removeEventListener(s[i],this.listener,!1);if(!e.aborted){if(r.duration=(new Date).getTime()-this.startTime,4===t.readyState){e.status=t.status;var a=t.responseType,u="arraybuffer"===a||"blob"===a||"json"===a?t.response:t.responseText,f=n(u);if(f&amp;amp;&amp;amp;(r.rxSize=f),this.sameOrigin){var d=t.getResponseHeader("X-NewRelic-App-Data");d&amp;amp;&amp;amp;(e.cat=d.split(", ").pop())}}else e.status=0;r.cbTime=this.cbTime,o("xhr",[e,r,this.startTime])}}}function n(t){if("string"==typeof t&amp;amp;&amp;amp;t.length)return t.length;if("object"!=typeof t)return void 0;if("undefined"!=typeof ArrayBuffer&amp;amp;&amp;amp;t instanceof ArrayBuffer&amp;amp;&amp;amp;t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&amp;amp;&amp;amp;t instanceof Blob&amp;amp;&amp;amp;t.size)return t.size;if("undefined"!=typeof FormData&amp;amp;&amp;amp;t instanceof FormData)return void 0;try{return JSON.stringify(t).length}catch(e){return void 0}}function r(t,e){var n=i(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.sameOrigin=n.sameOrigin}if(window.XMLHttpRequest&amp;amp;&amp;amp;XMLHttpRequest.prototype&amp;amp;&amp;amp;XMLHttpRequest.prototype.addEventListener&amp;amp;&amp;amp;!/CriOS/.test(navigator.userAgent)){t("loader").features.xhr=!0;var o=t("handle"),i=t(2),a=t("ee"),s=["load","error","abort","timeout"],c=s.length,u=t(1);t(4),t(3),a.on("new-xhr",function(){this.totalCbs=0,this.called=0,this.cbTime=0,this.end=e,this.ended=!1,this.xhrGuids={}}),a.on("open-xhr-start",function(t){this.params={method:t[0]},r(this,t[1]),this.metrics={}}),a.on("open-xhr-end",function(t,e){"loader_config"in NREUM&amp;amp;&amp;amp;"xpid"in NREUM.loader_config&amp;amp;&amp;amp;this.sameOrigin&amp;amp;&amp;amp;e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),a.on("send-xhr-start",function(t,e){var r=this.metrics,o=t[0],i=this;if(r&amp;amp;&amp;amp;o){var u=n(o);u&amp;amp;&amp;amp;(r.txSize=u)}this.startTime=(new Date).getTime(),this.listener=function(t){try{"abort"===t.type&amp;amp;&amp;amp;(i.params.aborted=!0),("load"!==t.type||i.called===i.totalCbs&amp;amp;&amp;amp;(i.onloadCalled||"function"!=typeof e.onload))&amp;amp;&amp;amp;i.end(e)}catch(n){try{a.emit("internal-error",[n])}catch(r){}}};for(var f=0;c&amp;gt;f;f++)e.addEventListener(s[f],this.listener,!1)}),a.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&amp;amp;&amp;amp;"function"==typeof n.onload||this.end(n)}),a.on("xhr-load-added",function(t,e){var n=""+u(t)+!!e;this.xhrGuids&amp;amp;&amp;amp;!this.xhrGuids[n]&amp;amp;&amp;amp;(this.xhrGuids[n]=!0,this.totalCbs+=1)}),a.on("xhr-load-removed",function(t,e){var n=""+u(t)+!!e;this.xhrGuids&amp;amp;&amp;amp;this.xhrGuids[n]&amp;amp;&amp;amp;(delete this.xhrGuids[n],this.totalCbs-=1)}),a.on("addEventListener-end",function(t,e){e instanceof XMLHttpRequest&amp;amp;&amp;amp;"load"===t[0]&amp;amp;&amp;amp;a.emit("xhr-load-added",[t[1],t[2]],e)}),a.on("removeEventListener-end",function(t,e){e instanceof XMLHttpRequest&amp;amp;&amp;amp;"load"===t[0]&amp;amp;&amp;amp;a.emit("xhr-load-removed",[t[1],t[2]],e)}),a.on("fn-start",function(t,e,n){e instanceof XMLHttpRequest&amp;amp;&amp;amp;("onload"===n&amp;amp;&amp;amp;(this.onload=!0),("load"===(t[0]&amp;amp;&amp;amp;t[0].type)||this.onload)&amp;amp;&amp;amp;(this.xhrCbStart=(new Date).getTime()))}),a.on("fn-end",function(t,e){this.xhrCbStart&amp;amp;&amp;amp;a.emit("xhr-cb-time",[(new Date).getTime()-this.xhrCbStart,this.onload,e],e)})}},{1:"XL7HBI",2:10,3:8,4:5,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],10:[function(t,e){e.exports=function(t){var e=document.createElement("a"),n=window.location,r={};e.href=t,r.port=e.port;var o=e.href.split("://");return!r.port&amp;amp;&amp;amp;o[1]&amp;amp;&amp;amp;(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&amp;amp;&amp;amp;"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=e.hostname||n.hostname,r.pathname=e.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&amp;amp;&amp;amp;(r.pathname="/"+r.pathname),r.sameOrigin=!e.hostname||e.hostname===document.domain&amp;amp;&amp;amp;e.port===n.port&amp;amp;&amp;amp;e.protocol===n.protocol,r}},{}],11:[function(t,e){function n(t){return function(){r(t,[(new Date).getTime()].concat(i(arguments)))}}var r=t("handle"),o=t(1),i=t(2);"undefined"==typeof window.newrelic&amp;amp;&amp;amp;(newrelic=window.NREUM);var a=["setPageViewName","addPageAction","setCustomAttribute","finished","addToTrace","inlineHit","noticeError"];o(a,function(t,e){window.NREUM[e]=n("api-"+e)}),e.exports=window.NREUM},{1:20,2:21,handle:"D5DuLP"}],"7eSDFh":[function(t,e){function n(t,e,n){if(r.call(t,e))return t[e];var o=n();if(Object.defineProperty&amp;amp;&amp;amp;Object.keys)try{return Object.defineProperty(t,e,{value:o,writable:!0,enumerable:!1}),o}catch(i){}return t[e]=o,o}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],gos:[function(t,e){e.exports=t("7eSDFh")},{}],handle:[function(t,e){e.exports=t("D5DuLP")},{}],D5DuLP:[function(t,e){function n(t,e,n){return r.listeners(t).length?r.emit(t,e,n):(o[t]||(o[t]=[]),void o[t].push(e))}var r=t("ee").create(),o={};e.exports=n,n.ee=r,r.q=o},{ee:"QJf3ax"}],id:[function(t,e){e.exports=t("XL7HBI")},{}],XL7HBI:[function(t,e){function n(t){var e=typeof t;return!t||"object"!==e&amp;amp;&amp;amp;"function"!==e?-1:t===window?0:i(t,o,function(){return r++})}var r=1,o="nr@id",i=t("gos");e.exports=n},{gos:"7eSDFh"}],G9z0Bl:[function(t,e){function n(){var t=p.info=NREUM.info,e=u.getElementsByTagName("script")[0];if(t&amp;amp;&amp;amp;t.licenseKey&amp;amp;&amp;amp;t.applicationID&amp;amp;&amp;amp;e){s(d,function(e,n){e in t||(t[e]=n)});var n="https"===f.split(":")[0]||t.sslForHttp;p.proto=n?"https://":"http://",a("mark",["onload",i()]);var r=u.createElement("script");r.src=p.proto+t.agent,e.parentNode.insertBefore(r,e)}}function r(){"complete"===u.readyState&amp;amp;&amp;amp;o()}function o(){a("mark",["domContent",i()])}function i(){return(new Date).getTime()}var a=t("handle"),s=t(1),c=(t(2),window),u=c.document,f=(""+location).split("?")[0],d={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-632.min.js"},p=e.exports={offset:i(),origin:f,features:{}};u.addEventListener?(u.addEventListener("DOMContentLoaded",o,!1),c.addEventListener("load",n,!1)):(u.attachEvent("onreadystatechange",r),c.attachEvent("onload",n)),a("mark",["firstbyte",i()])},{1:20,2:11,handle:"D5DuLP"}],loader:[function(t,e){e.exports=t("G9z0Bl")},{}],20:[function(t,e){function n(t,e){var n=[],o="",i=0;for(o in t)r.call(t,o)&amp;amp;&amp;amp;(n[i]=e(o,t[o]),i+=1);return n}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],21:[function(t,e){function n(t,e,n){e||(e=0),"undefined"==typeof n&amp;amp;&amp;amp;(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(0&amp;gt;o?0:o);++r&amp;lt;o;)i[r]=t[e+r];return i}e.exports=n},{}],22:[function(t,e){function n(t){return!(t&amp;amp;&amp;amp;"function"==typeof t&amp;amp;&amp;amp;t.apply&amp;amp;&amp;amp;!t[i])}var r=t("ee"),o=t(1),i="nr@wrapper",a=Object.prototype.hasOwnProperty;e.exports=function(t){function e(t,e,r,a){function nrWrapper(){var n,i,s,u;try{i=this,n=o(arguments),s=r&amp;amp;&amp;amp;r(n,i)||{}}catch(d){f([d,"",[n,i,a],s])}c(e+"start",[n,i,a],s);try{return u=t.apply(i,n)}catch(p){throw c(e+"err",[n,i,p],s),p}finally{c(e+"end",[n,i,u],s)}}return n(t)?t:(e||(e=""),nrWrapper[i]=!0,u(t,nrWrapper),nrWrapper)}function s(t,r,o,i){o||(o="");var a,s,c,u="-"===o.charAt(0);for(c=0;c&amp;lt;r.length;c++)s=r[c],a=t[s],n(a)||(t[s]=e(a,u?s+o:o,i,s))}function c(e,n,r){try{t.emit(e,n,r)}catch(o){f([o,e,n,r])}}function u(t,e){if(Object.defineProperty&amp;amp;&amp;amp;Object.keys)try{var n=Object.keys(t);return n.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(r){f([r])}for(var o in t)a.call(t,o)&amp;amp;&amp;amp;(e[o]=t[o]);return e}function f(e){try{t.emit("internal-error",e)}catch(n){}}return t||(t=r),e.inPlace=s,e.flag=i,e}},{1:21,ee:"QJf3ax"}]},{},["G9z0Bl",4,9]);&lt;/script&gt;
-    &lt;meta name="viewport" content="width=device-width" /&gt;
-    &lt;title&gt;The Internet&lt;/title&gt;
-    &lt;link href="/css/app.css" rel="stylesheet" /&gt;
-    &lt;link href="/css/font-awesome.css" rel="stylesheet" /&gt;
-    &lt;script src="/js/vendor/jquery-1.11.3.min.js"&gt;&lt;/script&gt;
-    &lt;script src="/js/vendor/jquery-ui-1.11.4/jquery-ui.js"&gt;&lt;/script&gt;
-    &lt;script src="/js/foundation/foundation.js"&gt;&lt;/script&gt;&lt;meta class="foundation-mq-small" /&gt;&lt;meta class="foundation-mq-medium" /&gt;&lt;meta class="foundation-mq-large" /&gt;&lt;style&gt;&lt;/style&gt;
-    &lt;script src="/js/foundation/foundation.alerts.js"&gt;&lt;/script&gt;
-    &lt;script&gt;
-      $(document).foundation();
-    &lt;/script&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-    &lt;div class="row"&gt;
-      &lt;div id="flash-messages" class="large-12 columns"&gt;
-      
-        
-      
-        
-          &lt;div data-alert="" id="flash" class="flash error"&gt;
-            Your password is invalid!
-            &lt;a href="#" class="close"&gt;×&lt;/a&gt;
-          &lt;/div&gt;
-        
-      
-        
-      
-      &lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div class="row"&gt;
-      &lt;a href="https://github.com/tourdedave/the-internet"&gt;&lt;img style="position: absolute; top: 0; right: 0; border: 0;" src="/img/forkme_right_green_007200.png" alt="Fork me on GitHub" /&gt;&lt;/a&gt;
-      &lt;div id="content" class="large-12 columns"&gt;
-        &lt;div class="example"&gt;
-  &lt;h2&gt;Login Page&lt;/h2&gt;
-  &lt;h4 class="subheader"&gt;This is where you can log into the secure area. Enter &lt;em&gt;tomsmith&lt;/em&gt; for the username and &lt;em&gt;SuperSecretPassword!&lt;/em&gt; for the password. If the information is wrong you should see error messages.&lt;/h4&gt;
-  &lt;form name="login" id="login" action="/authenticate" method="post"&gt;
-     &lt;div class="row"&gt;
-      &lt;div class="large-6 small-12 columns"&gt;
-        &lt;label for="username"&gt;Username&lt;/label&gt;
-        &lt;input type="text" name="username" id="username" /&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div class="row"&gt;
-      &lt;div class="large-6 small-12 columns"&gt;
-        &lt;label for="password"&gt;Password&lt;/label&gt;
-        &lt;input type="password" name="password" id="password" /&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-      &lt;button class="radius" type="submit"&gt;&lt;i class="fa fa-2x fa-sign-in"&gt; Login&lt;/i&gt;&lt;/button&gt;
-  &lt;/form&gt;
-&lt;/div&gt;
-
-      &lt;/div&gt;
-    &lt;/div&gt;
-  
-
-&lt;/body&gt;&lt;/html&gt;</msg>
-<kw name="Capture Page Screenshot" library="Selenium2Library">
-<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
-<msg timestamp="20150709 13:43:37.890" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" endtime="20150709 13:43:37.890" starttime="20150709 13:43:36.730"></status>
-</kw>
-<msg timestamp="20150709 13:43:37.890" level="FAIL">Page should have contained element 'xpath=//*[text()="Your username is invalid!" or text()="Your password is invalid!"]' but did not</msg>
-<status status="FAIL" endtime="20150709 13:43:37.890" starttime="20150709 13:43:35.893"></status>
-</kw>
-<status status="FAIL" endtime="20150709 13:43:37.890" starttime="20150709 13:43:35.519"></status>
-</kw>
-<status status="FAIL" endtime="20150709 13:43:37.890" starttime="20150709 13:43:26.113"></status>
-</kw>
-<kw type="teardown" name="End Web Test" library="Common">
-<kw name="Run Keyword If" library="BuiltIn">
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<arguments>
-<arg>'${REMOTE_URL}' != ''</arg>
-<arg>Update Saucelabs Test Result</arg>
-<arg>${SUITE_NAME}: ${TEST_NAME}</arg>
-<arg>${TEST_STATUS}</arg>
-<arg>${TEST_TAGS}</arg>
-<arg>${REMOTE_URL}</arg>
-</arguments>
-<kw name="Update Saucelabs Test Result" library="Saucelabs">
-<arguments>
-<arg>${SUITE_NAME}: ${TEST_NAME}</arg>
-<arg>${TEST_STATUS}</arg>
-<arg>${TEST_TAGS}</arg>
-<arg>${REMOTE_URL}</arg>
-</arguments>
-<msg timestamp="20150709 13:43:37.899" level="INFO">Starting new HTTPS connection (1): saucelabs.com</msg>
-<msg timestamp="20150709 13:43:38.602" html="yes" level="INFO">&lt;a href="https://saucelabs.com/jobs/50aed45597974fa3a9b071389cb09fee/video.flv"&gt;video.flv&lt;/a&gt;</msg>
-<status status="PASS" endtime="20150709 13:43:38.602" starttime="20150709 13:43:37.899"></status>
-</kw>
-<status status="PASS" endtime="20150709 13:43:38.602" starttime="20150709 13:43:37.899"></status>
+<status status="PASS" endtime="20150709 14:16:48.668" starttime="20150709 14:16:47.593"></status>
 </kw>
 <kw name="Close Browser" library="Selenium2Library">
 <doc>Closes the current browser.</doc>
-<status status="PASS" endtime="20150709 13:43:39.028" starttime="20150709 13:43:38.602"></status>
+<status status="PASS" endtime="20150709 14:16:49.075" starttime="20150709 14:16:48.668"></status>
 </kw>
-<status status="PASS" endtime="20150709 13:43:39.028" starttime="20150709 13:43:37.899"></status>
+<status status="PASS" endtime="20150709 14:16:49.075" starttime="20150709 14:16:47.577"></status>
 </kw>
-<status status="FAIL" endtime="20150709 13:43:39.028" critical="yes" starttime="20150709 13:43:20.320">Page should have contained element 'xpath=//*[text()="Your username is invalid!" or text()="Your password is invalid!"]' but did not</status>
-</test>
-<test id="s1-t3" name="Both fields are empty">
-<kw type="setup" name="Begin Web Test" library="Common">
-<kw name="Open Browser" library="Selenium2Library">
-<doc>Opens a new browser instance to given URL.</doc>
-<arguments>
-<arg>about:blank</arg>
-<arg>${BROWSER}</arg>
-<arg>remote_url=${REMOTE_URL}</arg>
-<arg>desired_capabilities=${DESIRED_CAPABILITIES}</arg>
-</arguments>
-<msg timestamp="20150709 13:43:39.043" level="INFO">Opening browser 'ie' to base url 'about:blank' through remote server at 'http://markwinspear:3e478c65-7a2a-4119-b4a1-cb96b23e6ed5@ondemand.saucelabs.com:80/wd/hub'</msg>
-<status status="PASS" endtime="20150709 13:43:44.162" starttime="20150709 13:43:39.043"></status>
-</kw>
-<status status="PASS" endtime="20150709 13:43:44.162" starttime="20150709 13:43:39.043"></status>
-</kw>
-<kw name="Login Should Fail When">
-<arguments>
-<arg>${empty}</arg>
-<arg>${empty}</arg>
-</arguments>
-<kw name="Load" library="Login">
-<kw name="Go To" library="Selenium2Library">
-<doc>Navigates the active browser instance to the provided URL.</doc>
-<arguments>
-<arg>http://the-internet.herokuapp.com/login</arg>
-</arguments>
-<msg timestamp="20150709 13:43:44.170" level="INFO">Opening url 'http://the-internet.herokuapp.com/login'</msg>
-<status status="PASS" endtime="20150709 13:43:46.342" starttime="20150709 13:43:44.166"></status>
-</kw>
-<kw name="Wait Until Page Contains" library="Selenium2Library">
-<doc>Waits until `text` appears on current page.</doc>
-<arguments>
-<arg>Login Page</arg>
-</arguments>
-<status status="PASS" endtime="20150709 13:43:46.671" starttime="20150709 13:43:46.342"></status>
-</kw>
-<status status="PASS" endtime="20150709 13:43:46.671" starttime="20150709 13:43:44.166"></status>
-</kw>
-<kw name="With" library="Login">
-<arguments>
-<arg>${username}</arg>
-<arg>${password}</arg>
-</arguments>
-<kw name="Load" library="Login">
-<kw name="Go To" library="Selenium2Library">
-<doc>Navigates the active browser instance to the provided URL.</doc>
-<arguments>
-<arg>http://the-internet.herokuapp.com/login</arg>
-</arguments>
-<msg timestamp="20150709 13:43:46.671" level="INFO">Opening url 'http://the-internet.herokuapp.com/login'</msg>
-<status status="PASS" endtime="20150709 13:43:47.655" starttime="20150709 13:43:46.671"></status>
-</kw>
-<kw name="Wait Until Page Contains" library="Selenium2Library">
-<doc>Waits until `text` appears on current page.</doc>
-<arguments>
-<arg>Login Page</arg>
-</arguments>
-<status status="PASS" endtime="20150709 13:43:48.003" starttime="20150709 13:43:47.655"></status>
-</kw>
-<status status="PASS" endtime="20150709 13:43:48.004" starttime="20150709 13:43:46.671"></status>
-</kw>
-<kw name="Enter Username" library="Login">
-<arguments>
-<arg>${username}</arg>
-</arguments>
-<kw name="Input Text" library="Selenium2Library">
-<doc>Types the given `text` into text field identified by `locator`.</doc>
-<arguments>
-<arg>id=username</arg>
-<arg>${username}</arg>
-</arguments>
-<msg timestamp="20150709 13:43:48.008" level="INFO">Typing text '' into text field 'id=username'</msg>
-<status status="PASS" endtime="20150709 13:43:49.294" starttime="20150709 13:43:48.007"></status>
-</kw>
-<status status="PASS" endtime="20150709 13:43:49.294" starttime="20150709 13:43:48.005"></status>
-</kw>
-<kw name="Enter Password" library="Login">
-<arguments>
-<arg>${password}</arg>
-</arguments>
-<kw name="Input Text" library="Selenium2Library">
-<doc>Types the given `text` into text field identified by `locator`.</doc>
-<arguments>
-<arg>id=password</arg>
-<arg>${password}</arg>
-</arguments>
-<msg timestamp="20150709 13:43:49.294" level="INFO">Typing text '' into text field 'id=password'</msg>
-<status status="PASS" endtime="20150709 13:43:50.589" starttime="20150709 13:43:49.294"></status>
-</kw>
-<status status="PASS" endtime="20150709 13:43:50.589" starttime="20150709 13:43:49.294"></status>
-</kw>
-<kw name="Click Login Button" library="Login">
-<kw name="Click Button" library="Selenium2Library">
-<doc>Clicks a button identified by `locator`.</doc>
-<arguments>
-<arg>xpath=//*[@id="login"]/button</arg>
-</arguments>
-<msg timestamp="20150709 13:43:50.589" level="INFO">Clicking button 'xpath=//*[@id="login"]/button'.</msg>
-<status status="PASS" endtime="20150709 13:43:52.941" starttime="20150709 13:43:50.589"></status>
-</kw>
-<status status="PASS" endtime="20150709 13:43:52.941" starttime="20150709 13:43:50.589"></status>
-</kw>
-<status status="PASS" endtime="20150709 13:43:52.941" starttime="20150709 13:43:46.671"></status>
-</kw>
-<kw name="Verify Login Fails" library="Login">
-<kw name="Page Should Contain Element" library="Selenium2Library">
-<doc>Verifies element identified by `locator` is found on the current page.</doc>
-<arguments>
-<arg>xpath=//*[@class="flash error"]</arg>
-</arguments>
-<msg timestamp="20150709 13:43:53.287" level="INFO">Current page contains element 'xpath=//*[@class="flash error"]'.</msg>
-<status status="PASS" endtime="20150709 13:43:53.303" starttime="20150709 13:43:52.945"></status>
-</kw>
-<kw name="Page Should Contain Element" library="Selenium2Library">
-<doc>Verifies element identified by `locator` is found on the current page.</doc>
-<arguments>
-<arg>xpath=//*[text()="Your username is invalid!" or text()="Your password is invalid!"]</arg>
-</arguments>
-<msg timestamp="20150709 13:43:54.149" level="INFO">&lt;!DOCTYPE html&gt;&lt;!--[if IE 8]&gt;         &lt;html class="no-js lt-ie9" lang="en" &gt; &lt;![endif]--&gt;&lt;!--[if gt IE 8]&gt;&lt;!--&gt;&lt;html xmlns="http://www.w3.org/1999/xhtml" class="no-js" lang="en"&gt;&lt;!--&lt;![endif]--&gt;&lt;head&gt;
-    &lt;script type="text/javascript" src="http://bam.nr-data.net/1/95e25f7a90?a=3982698&amp;amp;pl=1436449430734&amp;amp;v=632.2b17625&amp;amp;to=e1ZXEUNfVAoES0kxD1ZYTRdQH2sPD1gSEAcCA3gVQVxRBQBNDw0IF358MRFcVwEIVw%3D%3D&amp;amp;qt=13&amp;amp;ap=2&amp;amp;be=305&amp;amp;fe=158&amp;amp;dc=142&amp;amp;f=%5B%22err%22,%22xhr%22%5D&amp;amp;perf=%7B%22timing%22:%7B%22of%22:1436449430734,%22n%22:0,%22u%22:194,%22ue%22:198,%22dl%22:207,%22di%22:447,%22ds%22:447,%22de%22:447,%22dc%22:461,%22l%22:461,%22le%22:463,%22r%22:0,%22re%22:101,%22f%22:101,%22dn%22:101,%22dne%22:101,%22c%22:101,%22ce%22:101,%22rq%22:103,%22rp%22:191,%22rpe%22:262%7D,%22navigation%22:%7B%22rc%22:1%7D%7D&amp;amp;jsonp=NREUM.setToken"&gt;&lt;/script&gt;&lt;script src="http://js-agent.newrelic.com/nr-632.min.js"&gt;&lt;/script&gt;&lt;script src="/js/vendor/298279967.js"&gt;&lt;/script&gt;
-    &lt;meta charset="utf-8" /&gt;
-&lt;script type="text/javascript"&gt;window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"95e25f7a90","applicationID":"3982698","transactionName":"e1ZXEUNfVAoES0kxD1ZYTRdQH2sPD1gSEAcCA3gVQVxRBQBNDw0IF358MRFcVwEIVw==","queueTime":13,"applicationTime":2,"agent":"js-agent.newrelic.com/nr-632.min.js"}&lt;/script&gt;
-&lt;script type="text/javascript"&gt;(window.NREUM||(NREUM={})).loader_config={xpid:"Vw4AVFBaGwAJXFNUDgk="};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o?o:e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o&amp;lt;n.length;o++)r(n[o]);return r}({QJf3ax:[function(t,e){function n(t){function e(e,n,a){t&amp;amp;&amp;amp;t(e,n,a),a||(a={});for(var c=s(e),u=c.length,f=i(a,o,r),d=0;u&amp;gt;d;d++)c[d].apply(f,n);return f}function a(t,e){u[t]=s(t).concat(e)}function s(t){return u[t]||[]}function c(){return n(e)}var u={};return{on:a,emit:e,create:c,listeners:s,_events:u}}function r(){return{}}var o="nr@context",i=t("gos");e.exports=n()},{gos:"7eSDFh"}],ee:[function(t,e){e.exports=t("QJf3ax")},{}],3:[function(t){function e(t){try{i.console&amp;amp;&amp;amp;console.log(t)}catch(e){}}var n,r=t("ee"),o=t(1),i={};try{n=localStorage.getItem("__nr_flags").split(","),console&amp;amp;&amp;amp;"function"==typeof console.log&amp;amp;&amp;amp;(i.console=!0,-1!==n.indexOf("dev")&amp;amp;&amp;amp;(i.dev=!0),-1!==n.indexOf("nr_dev")&amp;amp;&amp;amp;(i.nrDev=!0))}catch(a){}i.nrDev&amp;amp;&amp;amp;r.on("internal-error",function(t){e(t.stack)}),i.dev&amp;amp;&amp;amp;r.on("fn-err",function(t,n,r){e(r.stack)}),i.dev&amp;amp;&amp;amp;(e("NR AGENT IN DEVELOPMENT MODE"),e("flags: "+o(i,function(t){return t}).join(", ")))},{1:20,ee:"QJf3ax"}],4:[function(t){function e(t,e,n,i,s){try{c?c-=1:r("err",[s||new UncaughtException(t,e,n)])}catch(u){try{r("ierr",[u,(new Date).getTime(),!0])}catch(f){}}return"function"==typeof a?a.apply(this,o(arguments)):!1}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function n(t){r("err",[t,(new Date).getTime()])}var r=t("handle"),o=t(6),i=t("ee"),a=window.onerror,s=!1,c=0;t("loader").features.err=!0,t(3),window.onerror=e;try{throw new Error}catch(u){"stack"in u&amp;amp;&amp;amp;(t(4),t(5),"addEventListener"in window&amp;amp;&amp;amp;t(1),window.XMLHttpRequest&amp;amp;&amp;amp;XMLHttpRequest.prototype&amp;amp;&amp;amp;XMLHttpRequest.prototype.addEventListener&amp;amp;&amp;amp;window.XMLHttpRequest&amp;amp;&amp;amp;XMLHttpRequest.prototype&amp;amp;&amp;amp;XMLHttpRequest.prototype.addEventListener&amp;amp;&amp;amp;!/CriOS/.test(navigator.userAgent)&amp;amp;&amp;amp;t(2),s=!0)}i.on("fn-start",function(){s&amp;amp;&amp;amp;(c+=1)}),i.on("fn-err",function(t,e,r){s&amp;amp;&amp;amp;(this.thrown=!0,n(r))}),i.on("fn-end",function(){s&amp;amp;&amp;amp;!this.thrown&amp;amp;&amp;amp;c&amp;gt;0&amp;amp;&amp;amp;(c-=1)}),i.on("internal-error",function(t){r("ierr",[t,(new Date).getTime(),!0])})},{1:5,2:8,3:3,4:7,5:6,6:21,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],5:[function(t,e){function n(t){i.inPlace(t,["addEventListener","removeEventListener"],"-",r)}function r(t){return t[1]}var o=(t(1),t("ee").create()),i=t(2)(o),a=t("gos");if(e.exports=o,n(window),"getPrototypeOf"in Object){for(var s=document;s&amp;amp;&amp;amp;!s.hasOwnProperty("addEventListener");)s=Object.getPrototypeOf(s);s&amp;amp;&amp;amp;n(s);for(var c=XMLHttpRequest.prototype;c&amp;amp;&amp;amp;!c.hasOwnProperty("addEventListener");)c=Object.getPrototypeOf(c);c&amp;amp;&amp;amp;n(c)}else XMLHttpRequest.prototype.hasOwnProperty("addEventListener")&amp;amp;&amp;amp;n(XMLHttpRequest.prototype);o.on("addEventListener-start",function(t){if(t[1]){var e=t[1];"function"==typeof e?this.wrapped=t[1]=a(e,"nr@wrapped",function(){return i(e,"fn-",null,e.name||"anonymous")}):"function"==typeof e.handleEvent&amp;amp;&amp;amp;i.inPlace(e,["handleEvent"],"fn-")}}),o.on("removeEventListener-start",function(t){var e=this.wrapped;e&amp;amp;&amp;amp;(t[1]=e)})},{1:21,2:22,ee:"QJf3ax",gos:"7eSDFh"}],6:[function(t,e){var n=(t(2),t("ee").create()),r=t(1)(n);e.exports=n,r.inPlace(window,["requestAnimationFrame","mozRequestAnimationFrame","webkitRequestAnimationFrame","msRequestAnimationFrame"],"raf-"),n.on("raf-start",function(t){t[0]=r(t[0],"fn-")})},{1:22,2:21,ee:"QJf3ax"}],7:[function(t,e){function n(t,e,n){t[0]=o(t[0],"fn-",null,n)}var r=(t(2),t("ee").create()),o=t(1)(r);e.exports=r,o.inPlace(window,["setTimeout","setInterval","setImmediate"],"setTimer-"),r.on("setTimer-start",n)},{1:22,2:21,ee:"QJf3ax"}],8:[function(t,e){function n(){u.inPlace(this,p,"fn-")}function r(t,e){u.inPlace(e,["onreadystatechange"],"fn-")}function o(t,e){return e}function i(t,e){for(var n in t)e[n]=t[n];return e}var a=t("ee").create(),s=t(1),c=t(2),u=c(a),f=c(s),d=window.XMLHttpRequest,p=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"];e.exports=a,window.XMLHttpRequest=function(t){var e=new d(t);try{a.emit("new-xhr",[],e),f.inPlace(e,["addEventListener","removeEventListener"],"-",o),e.addEventListener("readystatechange",n,!1)}catch(r){try{a.emit("internal-error",[r])}catch(i){}}return e},i(d,XMLHttpRequest),XMLHttpRequest.prototype=d.prototype,u.inPlace(XMLHttpRequest.prototype,["open","send"],"-xhr-",o),a.on("send-xhr-start",r),a.on("open-xhr-start",r)},{1:5,2:22,ee:"QJf3ax"}],9:[function(t){function e(t){var e=this.params,r=this.metrics;if(!this.ended){this.ended=!0;for(var i=0;c&amp;gt;i;i++)t.removeEventListener(s[i],this.listener,!1);if(!e.aborted){if(r.duration=(new Date).getTime()-this.startTime,4===t.readyState){e.status=t.status;var a=t.responseType,u="arraybuffer"===a||"blob"===a||"json"===a?t.response:t.responseText,f=n(u);if(f&amp;amp;&amp;amp;(r.rxSize=f),this.sameOrigin){var d=t.getResponseHeader("X-NewRelic-App-Data");d&amp;amp;&amp;amp;(e.cat=d.split(", ").pop())}}else e.status=0;r.cbTime=this.cbTime,o("xhr",[e,r,this.startTime])}}}function n(t){if("string"==typeof t&amp;amp;&amp;amp;t.length)return t.length;if("object"!=typeof t)return void 0;if("undefined"!=typeof ArrayBuffer&amp;amp;&amp;amp;t instanceof ArrayBuffer&amp;amp;&amp;amp;t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&amp;amp;&amp;amp;t instanceof Blob&amp;amp;&amp;amp;t.size)return t.size;if("undefined"!=typeof FormData&amp;amp;&amp;amp;t instanceof FormData)return void 0;try{return JSON.stringify(t).length}catch(e){return void 0}}function r(t,e){var n=i(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.sameOrigin=n.sameOrigin}if(window.XMLHttpRequest&amp;amp;&amp;amp;XMLHttpRequest.prototype&amp;amp;&amp;amp;XMLHttpRequest.prototype.addEventListener&amp;amp;&amp;amp;!/CriOS/.test(navigator.userAgent)){t("loader").features.xhr=!0;var o=t("handle"),i=t(2),a=t("ee"),s=["load","error","abort","timeout"],c=s.length,u=t(1);t(4),t(3),a.on("new-xhr",function(){this.totalCbs=0,this.called=0,this.cbTime=0,this.end=e,this.ended=!1,this.xhrGuids={}}),a.on("open-xhr-start",function(t){this.params={method:t[0]},r(this,t[1]),this.metrics={}}),a.on("open-xhr-end",function(t,e){"loader_config"in NREUM&amp;amp;&amp;amp;"xpid"in NREUM.loader_config&amp;amp;&amp;amp;this.sameOrigin&amp;amp;&amp;amp;e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),a.on("send-xhr-start",function(t,e){var r=this.metrics,o=t[0],i=this;if(r&amp;amp;&amp;amp;o){var u=n(o);u&amp;amp;&amp;amp;(r.txSize=u)}this.startTime=(new Date).getTime(),this.listener=function(t){try{"abort"===t.type&amp;amp;&amp;amp;(i.params.aborted=!0),("load"!==t.type||i.called===i.totalCbs&amp;amp;&amp;amp;(i.onloadCalled||"function"!=typeof e.onload))&amp;amp;&amp;amp;i.end(e)}catch(n){try{a.emit("internal-error",[n])}catch(r){}}};for(var f=0;c&amp;gt;f;f++)e.addEventListener(s[f],this.listener,!1)}),a.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&amp;amp;&amp;amp;"function"==typeof n.onload||this.end(n)}),a.on("xhr-load-added",function(t,e){var n=""+u(t)+!!e;this.xhrGuids&amp;amp;&amp;amp;!this.xhrGuids[n]&amp;amp;&amp;amp;(this.xhrGuids[n]=!0,this.totalCbs+=1)}),a.on("xhr-load-removed",function(t,e){var n=""+u(t)+!!e;this.xhrGuids&amp;amp;&amp;amp;this.xhrGuids[n]&amp;amp;&amp;amp;(delete this.xhrGuids[n],this.totalCbs-=1)}),a.on("addEventListener-end",function(t,e){e instanceof XMLHttpRequest&amp;amp;&amp;amp;"load"===t[0]&amp;amp;&amp;amp;a.emit("xhr-load-added",[t[1],t[2]],e)}),a.on("removeEventListener-end",function(t,e){e instanceof XMLHttpRequest&amp;amp;&amp;amp;"load"===t[0]&amp;amp;&amp;amp;a.emit("xhr-load-removed",[t[1],t[2]],e)}),a.on("fn-start",function(t,e,n){e instanceof XMLHttpRequest&amp;amp;&amp;amp;("onload"===n&amp;amp;&amp;amp;(this.onload=!0),("load"===(t[0]&amp;amp;&amp;amp;t[0].type)||this.onload)&amp;amp;&amp;amp;(this.xhrCbStart=(new Date).getTime()))}),a.on("fn-end",function(t,e){this.xhrCbStart&amp;amp;&amp;amp;a.emit("xhr-cb-time",[(new Date).getTime()-this.xhrCbStart,this.onload,e],e)})}},{1:"XL7HBI",2:10,3:8,4:5,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],10:[function(t,e){e.exports=function(t){var e=document.createElement("a"),n=window.location,r={};e.href=t,r.port=e.port;var o=e.href.split("://");return!r.port&amp;amp;&amp;amp;o[1]&amp;amp;&amp;amp;(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&amp;amp;&amp;amp;"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=e.hostname||n.hostname,r.pathname=e.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&amp;amp;&amp;amp;(r.pathname="/"+r.pathname),r.sameOrigin=!e.hostname||e.hostname===document.domain&amp;amp;&amp;amp;e.port===n.port&amp;amp;&amp;amp;e.protocol===n.protocol,r}},{}],11:[function(t,e){function n(t){return function(){r(t,[(new Date).getTime()].concat(i(arguments)))}}var r=t("handle"),o=t(1),i=t(2);"undefined"==typeof window.newrelic&amp;amp;&amp;amp;(newrelic=window.NREUM);var a=["setPageViewName","addPageAction","setCustomAttribute","finished","addToTrace","inlineHit","noticeError"];o(a,function(t,e){window.NREUM[e]=n("api-"+e)}),e.exports=window.NREUM},{1:20,2:21,handle:"D5DuLP"}],"7eSDFh":[function(t,e){function n(t,e,n){if(r.call(t,e))return t[e];var o=n();if(Object.defineProperty&amp;amp;&amp;amp;Object.keys)try{return Object.defineProperty(t,e,{value:o,writable:!0,enumerable:!1}),o}catch(i){}return t[e]=o,o}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],gos:[function(t,e){e.exports=t("7eSDFh")},{}],handle:[function(t,e){e.exports=t("D5DuLP")},{}],D5DuLP:[function(t,e){function n(t,e,n){return r.listeners(t).length?r.emit(t,e,n):(o[t]||(o[t]=[]),void o[t].push(e))}var r=t("ee").create(),o={};e.exports=n,n.ee=r,r.q=o},{ee:"QJf3ax"}],id:[function(t,e){e.exports=t("XL7HBI")},{}],XL7HBI:[function(t,e){function n(t){var e=typeof t;return!t||"object"!==e&amp;amp;&amp;amp;"function"!==e?-1:t===window?0:i(t,o,function(){return r++})}var r=1,o="nr@id",i=t("gos");e.exports=n},{gos:"7eSDFh"}],G9z0Bl:[function(t,e){function n(){var t=p.info=NREUM.info,e=u.getElementsByTagName("script")[0];if(t&amp;amp;&amp;amp;t.licenseKey&amp;amp;&amp;amp;t.applicationID&amp;amp;&amp;amp;e){s(d,function(e,n){e in t||(t[e]=n)});var n="https"===f.split(":")[0]||t.sslForHttp;p.proto=n?"https://":"http://",a("mark",["onload",i()]);var r=u.createElement("script");r.src=p.proto+t.agent,e.parentNode.insertBefore(r,e)}}function r(){"complete"===u.readyState&amp;amp;&amp;amp;o()}function o(){a("mark",["domContent",i()])}function i(){return(new Date).getTime()}var a=t("handle"),s=t(1),c=(t(2),window),u=c.document,f=(""+location).split("?")[0],d={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-632.min.js"},p=e.exports={offset:i(),origin:f,features:{}};u.addEventListener?(u.addEventListener("DOMContentLoaded",o,!1),c.addEventListener("load",n,!1)):(u.attachEvent("onreadystatechange",r),c.attachEvent("onload",n)),a("mark",["firstbyte",i()])},{1:20,2:11,handle:"D5DuLP"}],loader:[function(t,e){e.exports=t("G9z0Bl")},{}],20:[function(t,e){function n(t,e){var n=[],o="",i=0;for(o in t)r.call(t,o)&amp;amp;&amp;amp;(n[i]=e(o,t[o]),i+=1);return n}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],21:[function(t,e){function n(t,e,n){e||(e=0),"undefined"==typeof n&amp;amp;&amp;amp;(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(0&amp;gt;o?0:o);++r&amp;lt;o;)i[r]=t[e+r];return i}e.exports=n},{}],22:[function(t,e){function n(t){return!(t&amp;amp;&amp;amp;"function"==typeof t&amp;amp;&amp;amp;t.apply&amp;amp;&amp;amp;!t[i])}var r=t("ee"),o=t(1),i="nr@wrapper",a=Object.prototype.hasOwnProperty;e.exports=function(t){function e(t,e,r,a){function nrWrapper(){var n,i,s,u;try{i=this,n=o(arguments),s=r&amp;amp;&amp;amp;r(n,i)||{}}catch(d){f([d,"",[n,i,a],s])}c(e+"start",[n,i,a],s);try{return u=t.apply(i,n)}catch(p){throw c(e+"err",[n,i,p],s),p}finally{c(e+"end",[n,i,u],s)}}return n(t)?t:(e||(e=""),nrWrapper[i]=!0,u(t,nrWrapper),nrWrapper)}function s(t,r,o,i){o||(o="");var a,s,c,u="-"===o.charAt(0);for(c=0;c&amp;lt;r.length;c++)s=r[c],a=t[s],n(a)||(t[s]=e(a,u?s+o:o,i,s))}function c(e,n,r){try{t.emit(e,n,r)}catch(o){f([o,e,n,r])}}function u(t,e){if(Object.defineProperty&amp;amp;&amp;amp;Object.keys)try{var n=Object.keys(t);return n.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(r){f([r])}for(var o in t)a.call(t,o)&amp;amp;&amp;amp;(e[o]=t[o]);return e}function f(e){try{t.emit("internal-error",e)}catch(n){}}return t||(t=r),e.inPlace=s,e.flag=i,e}},{1:21,ee:"QJf3ax"}]},{},["G9z0Bl",4,9]);&lt;/script&gt;
-    &lt;meta name="viewport" content="width=device-width" /&gt;
-    &lt;title&gt;The Internet&lt;/title&gt;
-    &lt;link href="/css/app.css" rel="stylesheet" /&gt;
-    &lt;link href="/css/font-awesome.css" rel="stylesheet" /&gt;
-    &lt;script src="/js/vendor/jquery-1.11.3.min.js"&gt;&lt;/script&gt;
-    &lt;script src="/js/vendor/jquery-ui-1.11.4/jquery-ui.js"&gt;&lt;/script&gt;
-    &lt;script src="/js/foundation/foundation.js"&gt;&lt;/script&gt;&lt;meta class="foundation-mq-small" /&gt;&lt;meta class="foundation-mq-medium" /&gt;&lt;meta class="foundation-mq-large" /&gt;&lt;style&gt;&lt;/style&gt;
-    &lt;script src="/js/foundation/foundation.alerts.js"&gt;&lt;/script&gt;
-    &lt;script&gt;
-      $(document).foundation();
-    &lt;/script&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-    &lt;div class="row"&gt;
-      &lt;div id="flash-messages" class="large-12 columns"&gt;
-      
-        
-      
-        
-          &lt;div data-alert="" id="flash" class="flash error"&gt;
-            Your username is invalid!
-            &lt;a href="#" class="close"&gt;×&lt;/a&gt;
-          &lt;/div&gt;
-        
-      
-        
-      
-      &lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div class="row"&gt;
-      &lt;a href="https://github.com/tourdedave/the-internet"&gt;&lt;img style="position: absolute; top: 0; right: 0; border: 0;" src="/img/forkme_right_green_007200.png" alt="Fork me on GitHub" /&gt;&lt;/a&gt;
-      &lt;div id="content" class="large-12 columns"&gt;
-        &lt;div class="example"&gt;
-  &lt;h2&gt;Login Page&lt;/h2&gt;
-  &lt;h4 class="subheader"&gt;This is where you can log into the secure area. Enter &lt;em&gt;tomsmith&lt;/em&gt; for the username and &lt;em&gt;SuperSecretPassword!&lt;/em&gt; for the password. If the information is wrong you should see error messages.&lt;/h4&gt;
-  &lt;form name="login" id="login" action="/authenticate" method="post"&gt;
-     &lt;div class="row"&gt;
-      &lt;div class="large-6 small-12 columns"&gt;
-        &lt;label for="username"&gt;Username&lt;/label&gt;
-        &lt;input type="text" name="username" id="username" /&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div class="row"&gt;
-      &lt;div class="large-6 small-12 columns"&gt;
-        &lt;label for="password"&gt;Password&lt;/label&gt;
-        &lt;input type="password" name="password" id="password" /&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-      &lt;button class="radius" type="submit"&gt;&lt;i class="fa fa-2x fa-sign-in"&gt; Login&lt;/i&gt;&lt;/button&gt;
-  &lt;/form&gt;
-&lt;/div&gt;
-
-      &lt;/div&gt;
-    &lt;/div&gt;
-  
-
-&lt;/body&gt;&lt;/html&gt;</msg>
-<kw name="Capture Page Screenshot" library="Selenium2Library">
-<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
-<msg timestamp="20150709 13:43:55.205" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" endtime="20150709 13:43:55.205" starttime="20150709 13:43:54.149"></status>
-</kw>
-<msg timestamp="20150709 13:43:55.205" level="FAIL">Page should have contained element 'xpath=//*[text()="Your username is invalid!" or text()="Your password is invalid!"]' but did not</msg>
-<status status="FAIL" endtime="20150709 13:43:55.205" starttime="20150709 13:43:53.303"></status>
-</kw>
-<status status="FAIL" endtime="20150709 13:43:55.205" starttime="20150709 13:43:52.941"></status>
-</kw>
-<status status="FAIL" endtime="20150709 13:43:55.205" starttime="20150709 13:43:44.166"></status>
-</kw>
-<kw type="teardown" name="End Web Test" library="Common">
-<kw name="Run Keyword If" library="BuiltIn">
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<arguments>
-<arg>'${REMOTE_URL}' != ''</arg>
-<arg>Update Saucelabs Test Result</arg>
-<arg>${SUITE_NAME}: ${TEST_NAME}</arg>
-<arg>${TEST_STATUS}</arg>
-<arg>${TEST_TAGS}</arg>
-<arg>${REMOTE_URL}</arg>
-</arguments>
-<kw name="Update Saucelabs Test Result" library="Saucelabs">
-<arguments>
-<arg>${SUITE_NAME}: ${TEST_NAME}</arg>
-<arg>${TEST_STATUS}</arg>
-<arg>${TEST_TAGS}</arg>
-<arg>${REMOTE_URL}</arg>
-</arguments>
-<msg timestamp="20150709 13:43:55.205" level="INFO">Starting new HTTPS connection (1): saucelabs.com</msg>
-<msg timestamp="20150709 13:43:55.878" html="yes" level="INFO">&lt;a href="https://saucelabs.com/jobs/05c8dbf4f2da4a8bbb5c76944f443330/video.flv"&gt;video.flv&lt;/a&gt;</msg>
-<status status="PASS" endtime="20150709 13:43:55.878" starttime="20150709 13:43:55.205"></status>
-</kw>
-<status status="PASS" endtime="20150709 13:43:55.878" starttime="20150709 13:43:55.205"></status>
-</kw>
-<kw name="Close Browser" library="Selenium2Library">
-<doc>Closes the current browser.</doc>
-<status status="PASS" endtime="20150709 13:43:56.353" starttime="20150709 13:43:55.878"></status>
-</kw>
-<status status="PASS" endtime="20150709 13:43:56.353" starttime="20150709 13:43:55.205"></status>
-</kw>
-<status status="FAIL" endtime="20150709 13:43:56.353" critical="yes" starttime="20150709 13:43:39.043">Page should have contained element 'xpath=//*[text()="Your username is invalid!" or text()="Your password is invalid!"]' but did not</status>
+<status status="PASS" endtime="20150709 14:16:49.076" critical="yes" starttime="20150709 14:16:27.652"></status>
 </test>
 <doc>This is some basic info about the whole suite</doc>
-<status status="FAIL" endtime="20150709 13:43:56.353" starttime="20150709 13:43:00.801"></status>
+<status status="PASS" endtime="20150709 14:16:49.076" starttime="20150709 14:16:27.338"></status>
 </suite>
 <statistics>
 <total>
-<stat fail="3" pass="0">Critical Tests</stat>
-<stat fail="3" pass="0">All Tests</stat>
+<stat fail="0" pass="1">Critical Tests</stat>
+<stat fail="0" pass="1">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat fail="3" id="s1" name="Logintest" pass="0">Logintest</stat>
+<stat fail="0" id="s1" name="Logintest" pass="1">Logintest</stat>
 </suite>
 </statistics>
 <errors>

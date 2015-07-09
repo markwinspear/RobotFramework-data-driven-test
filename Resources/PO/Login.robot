@@ -3,7 +3,7 @@ Library  Selenium2Library
 
 *** Variables ***
 ${username_locator}         id=username
-£{password_locator}         id=password
+${password_locator}         id=password
 ${loginButton_locator}      xpath=//*[@id="login"]/button
 ${errorMessage_locator}     xpath=//*[@class="flash error"]
 
