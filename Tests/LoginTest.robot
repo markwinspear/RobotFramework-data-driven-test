@@ -19,7 +19,7 @@ The Password is empty       tomsmith        ${empty}
 Both fields are empty       ${empty}        ${empty}
 
 *** Keywords ***
-Login Should Fail When [Arguments]  ${username}  ${password}
+Login Should Fail When  [Arguments]  ${username}  ${password}
     Login.Load
     Login.With  ${username}  ${password}
     Login.Verify Login Fails
