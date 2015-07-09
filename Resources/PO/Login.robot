@@ -23,6 +23,7 @@ Verify Login Is Successful
 
 Verify Login Fails
     Page Should Contain Element  xpath=//*[@class="flash error"]
+    #Page Should Contain Element  xpath=//*[text()="Your username is invalid!" or text()="Your password is invalid!"]
 
 With  [Arguments]  ${username}    ${password}
     Load
