@@ -8,6 +8,7 @@ Test Setup  Common.Begin Web Test
 Test Teardown  Common.End Web Test
 
 *** Variables ***
+# including default values which can be overriden using -v at runtime
 ${BROWSER} =  ie
 #${SEARCH_TERM} =  ferrari 458
 ${REMOTE_URL} =  http://markwinspear:3e478c65-7a2a-4119-b4a1-cb96b23e6ed5@ondemand.saucelabs.com:80/wd/hub
