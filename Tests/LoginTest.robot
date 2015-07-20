@@ -1,11 +1,11 @@
 *** Settings ***
 Documentation  This is some basic info about the whole suite
 
-Resource  ../Resources/Common.robot                 # necessary for Setup & Teardown
+Resource  ../Resources/Web/Common.robot                 # necessary for Setup & Teardown
 Resource  ../Resources/PO/Login.robot               # necessary for lower level keywords in test cases
 Test Template   Login Should Fail When               #because this is data driven test
-Test Setup  Common.Begin Web Test
-Test Teardown  Common.End Web Test
+Test Setup  Common.Begin Remote Web Test
+Test Teardown  Common.End Remote Web Test
 
 *** Variables ***
 # including default values which can be overriden using -v at runtime
