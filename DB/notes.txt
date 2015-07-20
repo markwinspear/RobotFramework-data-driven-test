@@ -1,0 +1,2 @@
+Optional way to connect to SQL Server
+    #Connect To Database Using Custom Params  pymssql  database='rftutorial', user='rftutorial', password='Demoscript1!', host='sql1100.shared-servers.com', port=1090
