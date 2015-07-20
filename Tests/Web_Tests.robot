@@ -21,10 +21,19 @@ Logged out user can search for products
     Amazon.Search for Products
 
 Logged out user can add product to cart
-    [Tags]  Web
+    [Tags]  Web  Current
     Amazon.Search for Products
-    execute manual step  Do Something Manually  It Failed!
+
+    #turn this into a keyword if required to reduce verbosity in tests
+    execute manual step with screenshot  Click on something, anything, just do it
+
+    #run keyword and continue on failure  element should contain
     Amazon.Select Product from Search Results
     pause execution
     Amazon.Add Product to Cart
 
+*** Keywords ***
+Execute Manual Step With Screenshot  [Arguments]  ${step_description}
+    ${passed} =  run keyword and return status  execute manual step  ${step_description}  It Failed!
+    run keyword if  ${passed} == False  capture page screenshot
+    run keyword if  ${passed} == False  fail  test failed
