@@ -1,6 +1,6 @@
 *** Settings ***
 Documentation  These are some API tests
-Resource  Resources/API/Github.robot
+Resource  ../Resources/API/Github.robot
 
 # Many ways to run:
 # pybot -d results/api tests/API_Tests.robot

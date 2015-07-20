@@ -1,6 +1,6 @@
 *** Settings ***
 Documentation  These are some SQL Server Database tests
-Resource  Resources/DB/SQL_Server.robot
+Resource  ../Resources/DB/SQL_Server.robot
 Test Setup  SQL_Server.Connect
 Test Teardown  SQL_Server.Disconnect
 
