@@ -1,3 +1,7 @@
+def get_variables(arg):
+    if arg == 'Common':                 return Common
+    if arg == 'Login':                  return Login
+
 Common = {
     'error_message':                    'xpath=//*[@class="flash error"]',
 }
@@ -9,8 +13,5 @@ Login = {
    # 'error_message':                    'xpath=//*[@class="flash error"]',
 }
 
-def get_variables(arg):
-    if arg == 'Common':                 return Common
-    if arg == 'Login':                  return Login
 
 
