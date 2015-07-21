@@ -3,8 +3,8 @@ Documentation  This is some basic info about the whole suite
 
 Resource        ${CURDIR}/BaseWebTest.robot             # required for all tests
 Test Template   Login Should Fail When                  # because this is data driven test
-Test Setup      Common.Begin Remote Web Test            # required for all tests
-Test Teardown   Common.End Remote Web Test              # required for all tests
+Test Setup      Common.Begin Web Test                   # required for all tests
+Test Teardown   Common.End Web Test                     # required for all tests
 
 *** Variables ***
 

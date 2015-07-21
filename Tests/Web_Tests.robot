@@ -3,8 +3,8 @@ Documentation  These are some web tests
 Library  Dialogs
 Resource  ../Resources/Web/Common.robot
 Resource  ../Resources/Web/Amazon.robot
-Test Setup  Common.Begin Local Web Test
-Test Teardown  Common.End Local Web Test
+Test Setup  Common.Begin Web Test
+Test Teardown  Common.End Web Test
 
 *** Variables ***
 ${BROWSER} =  chrome
