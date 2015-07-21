@@ -2,7 +2,7 @@
 Documentation  This is some basic info about the whole suite
 
 Resource  ../Resources/Web/Common.robot                 # necessary for Setup & Teardown
-Resource  ../Resources/PO/Login.robot               # necessary for lower level keywords in test cases
+Resource  ../Resources/Web/PO/Login.robot               # necessary for lower level keywords in test cases
 Test Template   Login Should Fail When               #because this is data driven test
 Test Setup  Common.Begin Remote Web Test
 Test Teardown  Common.End Remote Web Test

@@ -1,11 +1,13 @@
 *** Settings ***
 Library  Selenium2Library
+Variables   ${CURDIR}/ObjectMap.py    Login
+Variables   ${CURDIR}/ObjectMap.py    Common
 
 *** Variables ***
-${username_field}         id=username
-${password_field}         id=password
-${login_button}           xpath=//*[@id="login"]/button
-${error_message}          xpath=//*[@class="flash error"]
+#${username_field}         id=username
+#${password_field}         id=password
+#${login_button}           xpath=//*[@id="login"]/button
+#${error_message}          xpath=//*[@class="flash error"]
 
 *** Keywords ***
 Load

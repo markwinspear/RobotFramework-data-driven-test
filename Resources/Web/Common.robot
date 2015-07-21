@@ -6,8 +6,9 @@ Library  Saucelabs
 
 *** Keywords ***
 Begin Remote Web Test
+    log many    "Capabilities to use:"  ${BROWSER}  ${DESIRED_CAPABILITIES}
     Open Browser  about:blank  ${BROWSER}  remote_url=${REMOTE_URL}  desired_capabilities=${DESIRED_CAPABILITIES}
-    # Maximize Browser Window
+    # Maximize Browser Window - needs to be non-mobile specific
 
 End Remote Web Test
     #This line updates the test case name, result and tags in the SauceLabs UI
