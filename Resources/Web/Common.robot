@@ -8,7 +8,7 @@ Library  BuiltIn
 *** Keywords ***
 Begin Web Test
     [Documentation]  if remote url is blank, this will open a local browser, else it will open sauce labs (default)
-    ...  to execute locally use -v BROWSER:[browser] -v REMOTE_URL:"" -v DESIRED_CAPABILITIES:""
+    ...     to execute locally use -v BROWSER:[browser] -v REMOTE_URL:"" -v DESIRED_CAPABILITIES:""
     log many    "Capabilities to use:"  ${BROWSER}  ${DESIRED_CAPABILITIES}
     run keyword if  '${REMOTE_URL}' != ""  Open Browser  about:blank  ${BROWSER}  remote_url=${REMOTE_URL}  desired_capabilities=${DESIRED_CAPABILITIES}
     ...  ELSE  Open Browser  about:blank  ${BROWSER}
