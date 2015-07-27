@@ -1,8 +1,8 @@
 *** Settings ***
-Library  DatabaseLibrary
-Library  String
-Library  DateTime
-Library  Dialogs
+Library     DatabaseLibrary
+Library     String
+Library     DateTime
+Library     Dialogs
 Variables   ${CURDIR}/config.py    db                       #imports database connection settings
 
 *** Variables ***

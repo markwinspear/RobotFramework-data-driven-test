@@ -15,15 +15,15 @@ Suite Teardown      Disconnect From Database
 *** Test Cases ***
 Insert a Record
     [Tags]  MySqlDB
-    MySql.Save Current Row Count
-    MySql.Get Input Data
-    MySql.Insert Record
-    MySql.Verify New Record Added
+    Save Current Row Count
+    Get Input Data
+    Insert Record
+    Verify New Record Added
 
 Verify Insert Contains Correct Input Data
     [Tags]  MySqlDB
-    MySql.Verify Last Record
+    Verify Last Record
 
 Log All Rows
     [Tags]  MySqlDB
-    MySql.Log All Rows
+    Log All Rows
