@@ -1,6 +1,6 @@
 *** Settings ***
 Documentation  These are some file & directory tests
-Resource  Os.robot
+Resource  os.robot
 
 # Many ways to run:
 # pybot -d results/operating-system tests/operating_system.robot
