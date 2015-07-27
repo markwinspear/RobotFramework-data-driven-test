@@ -10,6 +10,10 @@ ${PREVIOUS_ROW_COUNT}
 
 *** Keywords ***
 
+Connect and Setup Base Test Data
+    Connect To Database    pymysql    ${DBName}    ${DB_USER_NAME}    ${DB_USER_PASSWORD}    ${DB_HOST}    ${DB_PORT}
+    Recreate Base Test Data
+
 Save Current Row Count
     ${current_row_count} =  Row Count  SELECT * FROM personal_details;
     Set Suite Variable  ${PREVIOUS_ROW_COUNT}  ${current_row_count}
@@ -25,12 +29,15 @@ Get Input Data
     Set Suite Variable  ${SURNAME}  ${surname}
    # Set Suite Variable  ${DOB}  ${dob}
 
-Insert Record
-    # Optional: Use these commented lines to create your table if necessary
-    #Delete All Rows From Table  DemoItems
-    #Execute SQL String  DROP TABLE DemoItems
-    #Execute SQL String  CREATE TABLE DemoItems (ItemId INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY, ItemName VARCHAR(50) NOT NULL, FirstName VARCHAR(50) NOT NULL)
+Recreate Base Test Data
+    execute sql string  DROP TABLE personal_details
+    #delete all rows from table  personal_details                   could use this instead of deleting and recreating the table
+    execute sql string  CREATE TABLE personal_details (Id INT (7) UNSIGNED AUTO_INCREMENT PRIMARY KEY, firstname VARCHAR(30) NOT NULL, surname VARCHAR(30) NOT NULL, dob DATE NOT NULL)
+    ${base_data} =  Set Variable  INSERT INTO personal_details (firstName, surname, dob) VALUES ('Fred', 'Flintoff','2000/01/01')
+    #TODO: Put data into external file and import
+    execute sql string  ${base_data}
 
+Insert Record
     # I wasn't able to get a DateTime value inside the query like I did on SQL Server
     # so had to do it on a separate line. This is from the DateTime library.
     # For some reason, Pycharm/Intellibot doesn't recognize it and underlines it

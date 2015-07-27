@@ -1,6 +1,7 @@
 from openpyxl import load_workbook
 
 logins = {}
+data = []
 
 def get_logins(filename, sheetname):
     wk = load_workbook(filename)
@@ -18,3 +19,4 @@ def get_logins(filename, sheetname):
         except KeyError:
             pass
     return logins
+
