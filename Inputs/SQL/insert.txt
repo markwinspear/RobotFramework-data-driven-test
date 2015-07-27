@@ -1,0 +1,10 @@
+INSERT INTO
+DemoItems
+(
+	ItemName
+)
+VALUES
+(
+	'New Item: ' + CAST(GetDate() as VARCHAR(50))
+)
+
