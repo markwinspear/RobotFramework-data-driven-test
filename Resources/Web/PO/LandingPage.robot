@@ -1,4 +1,5 @@
 *** Settings ***
+Documentation  Page object representing Amazon's landing page
 Library  Selenium2Library
 
 *** Variables ***

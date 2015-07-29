@@ -57,7 +57,7 @@ Verify Last Record
     # notice here we use LIMIT 1 instead of TOP 1 in SQL Server
     ${queryResults} =  Query  SELECT * FROM personal_details ORDER BY surname, firstname DESC LIMIT 1
     # Examine the (0-based)  field of the first record in the results
-    Should be Equal as Strings  ${queryResults[0][1]}  ${SURNAME}
+    Should be Equal as Strings  ${queryResults[0][2]}  ${SURNAME}
     Log  ${queryResults[0][2]}
 
 Log All Rows

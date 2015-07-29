@@ -1,4 +1,5 @@
 *** Settings ***
+Documentation  Page object representing Amazon's shopping cart page
 Library  Selenium2Library
 
 *** Keywords ***

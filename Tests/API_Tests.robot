@@ -15,6 +15,10 @@ Make a simple REST API call
     [Tags]  API
     Check Github Username
 
+My Example Test
+    [Tags]  Current
+    Get Users Trello Cards                  #need a lot of investigation
+
 Display emoji from Github
     [Tags]  API
     Display Emoji

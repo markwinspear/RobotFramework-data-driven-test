@@ -1,9 +1,11 @@
+"""Functions which utilise the excel library"""
 from openpyxl import load_workbook
 
 logins = {}
 data = []
 
 def get_logins(filename, sheetname):
+    """Returns usernames and passwords when given the filename and sheetname for the test data"""
     wk = load_workbook(filename)
     ws = wk.get_sheet_by_name(sheetname)
     rowcount = 2            # assumes 1st row contains column headers

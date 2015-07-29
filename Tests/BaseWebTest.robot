@@ -1,4 +1,5 @@
 *** Settings ***
+Documentation   Imports Common resources and sets global variables for Sauce labs execution.  All page objects must inherit this
 Resource  ../Resources/Web/Common.robot                 # necessary for Setup & Teardown
 Resource  ../Resources/Web/PO/Login.robot               # necessary for lower level keywords in test cases
 

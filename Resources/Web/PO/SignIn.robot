@@ -1,4 +1,5 @@
 *** Settings ***
+Documentation  Page object representing Amazon's sign-in page
 Library  Selenium2Library
 
 *** Keywords ***

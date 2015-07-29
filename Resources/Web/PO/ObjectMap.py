@@ -1,3 +1,4 @@
+"""Returns a python dictionary containing objects relevant to the page requested.  Saves defining variables in each Page Object file"""
 def get_variables(arg):
     if arg == 'Common':                 return Common
     if arg == 'Login':                  return Login

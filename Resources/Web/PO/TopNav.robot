@@ -1,5 +1,5 @@
 *** Settings ***
-Documentation  Amazon top navigation
+Documentation  Page object representing Amazon top navigation
 Library  Selenium2Library
 
 *** Keywords ***

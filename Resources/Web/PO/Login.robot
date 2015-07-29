@@ -1,4 +1,5 @@
 *** Settings ***
+Documentation  Page object representing The internet test page login screen
 # These lines are required for each page object to import objects from the ObjectMap
 Resource    ${CURDIR}/BasePage.robot
 Variables   ${CURDIR}/ObjectMap.py    Login
