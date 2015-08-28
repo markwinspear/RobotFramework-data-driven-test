@@ -24,6 +24,6 @@ Username is wrong     test        test
 *** Keywords ***
 Login Should Fail When
     [Arguments]    ${username}    ${password}
-    Login.Load
+    Login.Load                                          #Login. is optional. Used for readability
     Login.With    ${username}    ${password}
     Login.Verify Login Fails
