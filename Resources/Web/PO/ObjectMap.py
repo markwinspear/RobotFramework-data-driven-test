@@ -1,4 +1,5 @@
-"""Returns a python dictionary containing objects relevant to the page requested.  Saves defining variables in each Page Object file"""
+"""Returns a python dictionary containing objects relevant to the page requested.
+..."Saves defining variables in each Page Object file"""
 def get_variables(arg):
     """
     Returns objects for the page requested

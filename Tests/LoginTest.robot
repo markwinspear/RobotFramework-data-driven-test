@@ -24,6 +24,6 @@ Username is wrong     test        test
 *** Keywords ***
 Login Should Fail When
     [Arguments]    ${username}    ${password}
-    Login.Load                                          #Login. is optional. Used for readability
-    Login.With    ${username}    ${password}
-    Login.Verify Login Fails
+    #Login Load                                          #Login. is optional. Using it seems to throw out "jump to definition"
+    With    ${username}    ${password}
+    Verify Login Fails
