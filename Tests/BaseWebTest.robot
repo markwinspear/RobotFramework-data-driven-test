@@ -9,5 +9,5 @@ Library  OperatingSystem
 ${BROWSER} =  ie
 #${SEARCH_TERM} =  ferrari 458
 #${REMOTE_URL} =  http://markwinspear:3e478c65-7a2a-4119-b4a1-cb96b23e6ed5@ondemand.saucelabs.com:80/wd/hub
-${REMOTE_URL} =  %(SAUCE_URL)
+${REMOTE_URL} =  Get Environment Variable     SAUCE_URL
 ${DESIRED_CAPABILITIES} =  name:Win8 + Chrome 43,platform:Windows 8.1,browserName:chrome,version:43
