@@ -2,7 +2,7 @@
 Documentation     Tests the login functionality
 Test Setup        Common.Begin Web Test    # required for all tests
 Test Teardown     Common.End Web Test    # required for all tests
-Test Template     Login Should Fail When    # because this is data driven test
+Test Template     Login Should Fail     # because this is data driven test
 Resource          ${CURDIR}/BaseWebTest.robot    # required for all tests
 
 *** Variables ***
