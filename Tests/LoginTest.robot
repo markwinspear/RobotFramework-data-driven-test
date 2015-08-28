@@ -22,7 +22,7 @@ Both fields are empty
 Username is wrong     test        test
 
 *** Keywords ***
-Login Should Fail When
+Login Should Fail
     [Arguments]    ${username}    ${password}
     #Login
     With    ${username}    ${password}
