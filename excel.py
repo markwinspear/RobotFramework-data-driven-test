@@ -12,13 +12,17 @@ def get_logins(filename, sheetname):
     for r in ws.rows:
         username = ws.cell(row = rowcount, column = 2)
         password = ws.cell(row = rowcount, column = 3)
+       # expected_result = ws.cell(row = rowcount, column = 4)
         print(username.value)
         print (password.value)
+        #print (expected_result.value)
         rowcount = rowcount + 1
-        logins[username.value] = password.value
+        logins[username.value] = [password.value]
+     #   logins[username.value] = [password.value, expected_result.value]
         try:                            #picks up on an empty row on the end - this removes it
             del logins[None]
         except KeyError:
             pass
     return logins
 
+#TODO: Make expected result load in from sheet using http://stackoverflow.com/questions/20585920/how-to-add-multiple-values-to-a-dictionary-key-in-python...

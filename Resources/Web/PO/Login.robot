@@ -49,5 +49,3 @@ Verify Login  [Arguments]  ${expected_result}
     ...  ELSE IF  "${expected_result}" == 'passes'  Login.Verify Login Is Successful
     ...  ELSE  fail("Expected result must be passes or fails)
 
-
-
