@@ -1,0 +1,8 @@
+
+common:
+  error_message:    xpath=//*[@class="flash error"]
+
+login:
+  username_field:   id=username
+  password_field:   id=password
+  login_button:     xpath=//*[@id="login"]/button
