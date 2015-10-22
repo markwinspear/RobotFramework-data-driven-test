@@ -2,8 +2,8 @@
 Library  excel
 Library  Collections
 Resource  ../Resources/Web/PO/Login.robot
+Resource        BaseWebTest.robot             # required for all tests
 
-Resource        ${CURDIR}/BaseWebTest.robot             # required for all tests
 Test Setup      Common.Begin Web Test                   # required for all tests
 Test Teardown   Common.End Web Test                     # required for all tests
 

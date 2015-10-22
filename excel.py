@@ -17,7 +17,7 @@ def get_logins(filename, sheetname):
         print (password.value)
         #print (expected_result.value)
         rowcount = rowcount + 1
-        logins[username.value] = [password.value]
+        logins[str(username.value)] = [str(password.value)]
      #   logins[username.value] = [password.value, expected_result.value]
         try:                            #picks up on an empty row on the end - this removes it
             del logins[None]

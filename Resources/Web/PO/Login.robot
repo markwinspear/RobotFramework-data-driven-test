@@ -1,9 +1,8 @@
 *** Settings ***
 Documentation  Page object representing The internet test page login screen
 # These lines are required for each page object to import objects from the ObjectMap
-Library  Selenium2Library
-Resource    ${CURDIR}/BasePage.robot
-Variables   ${CURDIR}/ObjectMap.yaml
+Resource    BasePage.robot
+Variables   ObjectMap.yaml
 #Variables   ${CURDIR}/ObjectMap.py    Login
 
 *** Variables ***
@@ -15,6 +14,7 @@ Load
 
 Enter Username  [Arguments]  ${username}
     Input Text  ${login.username_field}  ${username}
+
 
 Enter Password  [Arguments]  ${password}
     Input Text  ${login.password_field}  ${password}
